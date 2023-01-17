@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import {GrDownload} from 'react-icons/gr'
 import "./home.scss";
 
 const Home = () => {
+
+
+    const handleDownload = () => {
+        const link = document.createElement('a');
+        link.href = '/dev-cv.pdf';
+        link.download = 'dev-cv.pdf';
+        link.click();
+    }
+
+
+
+
+
   return (
     <div className="home">
       <div className="header">
@@ -11,6 +25,12 @@ const Home = () => {
         <div className="left">
           <h2>Marwen Jdidi</h2>
           <span>React JS developer</span>
+          <span  className="cv" onClick={handleDownload}>
+        
+            Download CV
+            <abbr title="clic here to download CV"><GrDownload  style={{fontSize:"20px"}}/></abbr>
+            
+            </span>
         </div>
       </div>
 
@@ -34,32 +54,31 @@ const Home = () => {
         <div className="items">
           <span className="item">
             <img src="/react.png" />
-            React.JS
+            <h5>React.JS </h5> 
           </span>
 
           <span className="item">
             <img src="/javascript.png" />
-            JavaScript
+            <h5>JavaScript </h5> 
           </span>
           <span className="item">
             <img src="/node.png" />
-            Node.JS
+            <h5>Node.JS</h5> 
           </span>
 
           <span className="item">
             <img src="/mongo.png" />
-            MongoDB
+            <h5>MongoDB</h5> 
           </span>
           <span className="item">
-            <img src="/css.png" />
-            CSS
+            <img src="/css.png" style={{  marginLeft :"-20px" }} />
+           <h5>CSS </h5> 
           </span>
           <span className="item" >
-            <img src="/scss.png" style={{ width: "110px" }}   />
-            {/* <br /> */}
-            SASS
+            <img src="/scss.png" style={{ width: "110px", marginLeft :"-20px" }}   />
+            <h5>SASS</h5> 
           </span>
-          <span className="item"   style={{marginLeft: "10px"}}  >
+          <span className="item"     >
             <img
               src="/github.png"
               style={{
@@ -68,16 +87,36 @@ const Home = () => {
                 // marginLeft: "10px",
               }}
             />
-            Github
+            <h5>Github</h5> 
           </span>
         </div>
       </div>
       <div className="projects">
-        <div className="project1">blog</div>
-        <div className="project1">Social-media</div>
-        <div className="project1">Job-app</div>
-        <div className="project1">E-commerce</div>
-        <div className="project1">Dashboard</div>
+        <h2>Projects</h2>
+        <div className="sideprojects">
+        <div className="project1">
+            <div className="top">
+            <span>Blog-app</span>
+            <img   src="/logo512.png"  />
+
+            </div>
+          
+            <div className="links">
+                <span>Code</span>
+                <span>Demo</span>
+                <span>app</span>
+            </div>
+
+        </div>
+        <div className="project2">Social-media</div>
+        <div className="project3">Job-app</div>
+        <div className="project4">E-commerce</div>
+        <div className="project5">Dashboard</div>
+
+
+        </div>
+
+   
       </div>
       <div className="contact">contact</div>
     </div>
