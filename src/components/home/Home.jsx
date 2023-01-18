@@ -1,20 +1,16 @@
 import React, { useState } from "react";
-import {GrDownload} from 'react-icons/gr'
+import { GrDownload } from "react-icons/gr";
+import { FaLinkedin, FaTwitter, FaEnvelope, FaGithub } from 'react-icons/fa';
+
 import "./home.scss";
 
 const Home = () => {
-
-
-    const handleDownload = () => {
-        const link = document.createElement('a');
-        link.href = '/dev-cv.pdf';
-        link.download = 'dev-cv.pdf';
-        link.click();
-    }
-
-
-
-
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/dev-cv.pdf";
+    link.download = "dev-cv.pdf";
+    link.click();
+  };
 
   return (
     <div className="home">
@@ -25,12 +21,12 @@ const Home = () => {
         <div className="left">
           <h2>Marwen Jdidi</h2>
           <span>React JS developer</span>
-          <span  className="cv" onClick={handleDownload}>
-        
+          <span className="cv" onClick={handleDownload}>
             Download CV
-            <abbr title="clic here to download CV"><GrDownload  style={{fontSize:"20px"}}/></abbr>
-            
-            </span>
+            <abbr title="clic here to download CV">
+              <GrDownload style={{ fontSize: "20px" }} />
+            </abbr>
+          </span>
         </div>
       </div>
 
@@ -54,31 +50,34 @@ const Home = () => {
         <div className="items">
           <span className="item">
             <img src="/react.png" />
-            <h5>React.JS </h5> 
+            <h5>React.JS </h5>
           </span>
 
           <span className="item">
             <img src="/javascript.png" />
-            <h5>JavaScript </h5> 
+            <h5>JavaScript </h5>
           </span>
           <span className="item">
             <img src="/node.png" />
-            <h5>Node.JS</h5> 
+            <h5>Node.JS</h5>
           </span>
 
           <span className="item">
             <img src="/mongo.png" />
-            <h5>MongoDB</h5> 
+            <h5>MongoDB</h5>
           </span>
           <span className="item">
-            <img src="/css.png" style={{  marginLeft :"-20px" }} />
-           <h5>CSS </h5> 
+            <img src="/css.png" style={{ marginLeft: "-20px" }} />
+            <h5>CSS </h5>
           </span>
-          <span className="item" >
-            <img src="/scss.png" style={{ width: "110px", marginLeft :"-20px" }}   />
-            <h5>SASS</h5> 
+          <span className="item">
+            <img
+              src="/scss.png"
+              style={{ width: "110px", marginLeft: "-20px" }}
+            />
+            <h5>SASS</h5>
           </span>
-          <span className="item"     >
+          <span className="item">
             <img
               src="/github.png"
               style={{
@@ -87,38 +86,96 @@ const Home = () => {
                 // marginLeft: "10px",
               }}
             />
-            <h5>Github</h5> 
+            <h5>Github</h5>
           </span>
         </div>
       </div>
       <div className="projects">
         <h2>Projects</h2>
         <div className="sideprojects">
-        <div className="project1">
+          <div className="project">
             <div className="top">
-            <span>Blog-app</span>
-            <img   src="/logo512.png"  />
-
+              <span>Blog-app</span>
+              <img src="/blog.png" />
             </div>
-          
+
             <div className="links">
-                <span>Code</span>
-                <span>Demo</span>
-                <span>app</span>
+              <span>Code</span>
+              <span>Demo</span>
+              <span>app</span>
             </div>
-
+          </div>
+          <div className="project">
+      
+            <div className="top">
+              <span>Social-Media</span>
+              <img src="/blog.png" />
+            </div>
+            <div className="links">
+              <span>Code</span>
+              <span>Demo</span>
+              <span>app</span>
+            </div>
+          </div>
+          <div className="project">
+        
+            <div className="top">
+              <span>Job-app</span>
+              <img src="/blog.png" />
+            </div>
+            <div className="links">
+              <span>Code</span>
+              <span>Demo</span>
+              <span>app</span>
+            </div>
+          </div>
+          <div className="project">
+        
+            <div className="top">
+              <span>E-Commerce</span>
+              <img src="/blog.png" />
+            </div>
+            <div className="links">
+              <span>Code</span>
+              <span>Demo</span>
+              <span>app</span>
+            </div>
+          </div>
+          <div className="project">
+       
+            <div className="top">
+              <span>Dashboard</span>
+              <img src="/blog.png" />
+            </div>
+            <div className="links">
+              <span>Code</span>
+              <span>Demo</span>
+              <span>app</span>
+            </div>
+          </div>
         </div>
-        <div className="project2">Social-media</div>
-        <div className="project3">Job-app</div>
-        <div className="project4">E-commerce</div>
-        <div className="project5">Dashboard</div>
-
-
-        </div>
-
-   
       </div>
-      <div className="contact">contact</div>
+      <div className="contact">
+  
+
+        <section id="contact">
+      <h2>Contact</h2>
+      <div className="contact-links">
+        <a href="https://www.linkedin.com/in/marwen-jdidi-69668344">
+          <FaLinkedin size={32} />
+        </a>
+        <a href="https://twitter.com/MarwenCode">
+          <FaTwitter size={32} />
+        </a>
+        <a href="mailto:marwen.jdidi75@gmail.com">
+          <FaEnvelope size={32} />
+        </a>
+        <a href="https://github.com/MarwenCode">
+          <FaGithub size={32} />
+        </a>
+      </div>
+    </section>
+      </div>
     </div>
   );
 };
