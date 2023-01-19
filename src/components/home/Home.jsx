@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { GrDownload } from "react-icons/gr";
 import { FaLinkedin, FaTwitter, FaEnvelope, FaGithub } from 'react-icons/fa';
+import Modal from "../modal/Modal";
 
 import "./home.scss";
 
 const Home = () => {
+  const [showModal, setShowModal] = useState(false)
+
+
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = "/dev-cv.pdf";
@@ -91,7 +95,14 @@ const Home = () => {
         </div>
       </div>
       <div className="projects">
-        <h2>Projects</h2>
+        <h2>Projects <span onClick={() => setShowModal((prev) => !prev)}> clic me to learn more !</span></h2>
+        
+
+        {showModal && (
+               <Modal  setShowModal={setShowModal} />
+        )}
+     
+        
         <div className="sideprojects">
           <div className="project">
             <div className="top">
