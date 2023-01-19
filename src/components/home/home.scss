@@ -1,4 +1,5 @@
 .home {
+  
   .header {
     display: flex;
     // transform: translate(50%,10%);
@@ -28,10 +29,25 @@
       padding-left: 50px;
       padding-top: 20px;
       background-color: rgb(235, 225, 225);
+     
 
       .cv {
         cursor: pointer;
         font-size: small;
+        border: 2px solid rgb(253, 244, 244);
+        width: 60%;
+        padding: 5px;
+        border-radius: 20px;
+        background-color: rgb(167, 154, 154);
+        color: rgb(31, 29, 29);
+
+        .icon {
+         color: #ccc;
+          margin-left: 10px;
+        }
+
+       
+       
       }
     }
 
@@ -135,6 +151,8 @@
 
   .projects {
     background-color: rgb(255, 247, 247);
+    // background-color: rgb(255, 247, 247);
+    // background-image: url('./../../../public/background.png');
     h2 {
       margin-left: 710px;
       margin-top: 50px;
@@ -145,6 +163,7 @@
         font-size: small;
         font-family: 'Times New Roman', Times, serif;
         color: rgb(100, 98, 98);
+       
       }
     }
    
@@ -231,6 +250,8 @@
     text-align: center;
     margin-top: 100px;
 
+    position: relative;
+
     h2 {
       margin-bottom: 2rem;
     }
@@ -256,6 +277,84 @@
       }
     }
   }
+
+  .bubbles {
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+   bottom:0px;
+  
+
+    img {
+      width: 50px;
+      animation: bubble 10s linear infinite ;
+   
+     
+    
+
+      @keyframes bubble {
+        0% {
+          transform:  translateY(0);
+          opacity: 0;
+        }
+        50% {
+       
+          opacity: 1;
+        }
+        70% {
+          
+          opacity: 1;
+        }
+        100% {
+          transform:  translateY(-300vh);
+          opacity: 0;
+        }
+    
+      }
+
+
+
+    }
+
+    img:nth-child(1) {
+
+      animation-delay:2s;
+    }
+    img:nth-child(2) {
+
+      animation-delay:3s;
+    }
+    img:nth-child(3) {
+
+      animation-delay:4s;
+    }
+    img:nth-child(4) {
+
+      animation-delay:5s;
+    }
+    img:nth-child(5) {
+
+      animation-delay:6s;
+    }
+    img:nth-child(6) {
+
+      animation-delay:7s;
+    }
+    img:nth-child(7) {
+
+      animation-delay:8s;
+    }
+
+  
+
+
+  }
+
+
+
+ 
 }
 
 @media (max-width: 500px) {

@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { GrDownload } from "react-icons/gr";
-import { FaLinkedin, FaTwitter, FaEnvelope, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaTwitter, FaEnvelope, FaGithub } from "react-icons/fa";
 import Modal from "../modal/Modal";
 
 import "./home.scss";
 
 const Home = () => {
-  const [showModal, setShowModal] = useState(false)
-
+  const [showModal, setShowModal] = useState(false);
 
   const handleDownload = () => {
     const link = document.createElement("a");
@@ -28,7 +27,7 @@ const Home = () => {
           <span className="cv" onClick={handleDownload}>
             Download CV
             <abbr title="clic here to download CV">
-              <GrDownload style={{ fontSize: "20px" }} />
+              <GrDownload style={{ fontSize: "20px" }} className="icon" />
             </abbr>
           </span>
         </div>
@@ -95,14 +94,16 @@ const Home = () => {
         </div>
       </div>
       <div className="projects">
-        <h2>Projects <span onClick={() => setShowModal((prev) => !prev)}> clic me to learn more !</span></h2>
-        
+        <h2>
+          Projects{" "}
+          <span onClick={() => setShowModal((prev) => !prev)}>
+            {" "}
+            clic me to learn more !
+          </span>
+        </h2>
 
-        {showModal && (
-               <Modal  setShowModal={setShowModal} />
-        )}
-     
-        
+        {showModal && <Modal setShowModal={setShowModal} />}
+
         <div className="sideprojects">
           <div className="project">
             <div className="top">
@@ -117,7 +118,6 @@ const Home = () => {
             </div>
           </div>
           <div className="project">
-      
             <div className="top">
               <span>Social-Media</span>
               <img src="/blog.png" />
@@ -129,7 +129,6 @@ const Home = () => {
             </div>
           </div>
           <div className="project">
-        
             <div className="top">
               <span>Job-app</span>
               <img src="/blog.png" />
@@ -141,7 +140,6 @@ const Home = () => {
             </div>
           </div>
           <div className="project">
-        
             <div className="top">
               <span>E-Commerce</span>
               <img src="/blog.png" />
@@ -153,7 +151,6 @@ const Home = () => {
             </div>
           </div>
           <div className="project">
-       
             <div className="top">
               <span>Dashboard</span>
               <img src="/blog.png" />
@@ -167,25 +164,33 @@ const Home = () => {
         </div>
       </div>
       <div className="contact">
-  
-
         <section id="contact">
-      <h2>Contact</h2>
-      <div className="contact-links">
-        <a href="https://www.linkedin.com/in/marwen-jdidi-69668344">
-          <FaLinkedin size={32} />
-        </a>
-        <a href="https://twitter.com/MarwenCode">
-          <FaTwitter size={32} />
-        </a>
-        <a href="mailto:marwen.jdidi75@gmail.com">
-          <FaEnvelope size={32} />
-        </a>
-        <a href="https://github.com/MarwenCode">
-          <FaGithub size={32} />
-        </a>
+          <h2>Contact</h2>
+          <div className="contact-links">
+            <a href="https://www.linkedin.com/in/marwen-jdidi-69668344">
+              <FaLinkedin size={32} />
+            </a>
+            <a href="https://twitter.com/MarwenCode">
+              <FaTwitter size={32} />
+            </a>
+            <a href="mailto:marwen.jdidi75@gmail.com">
+              <FaEnvelope size={32} />
+            </a>
+            <a href="https://github.com/MarwenCode">
+              <FaGithub size={32} />
+            </a>
+          </div>
+        </section>
       </div>
-    </section>
+      <div className="bubbles">
+        <img  src="/bubble.png" />
+        <img  src="/bubble.png" />
+        <img  src="/bubble.png" />
+        <img  src="/bubble.png" />
+        <img  src="/bubble.png" />
+        <img  src="/bubble.png" />
+        <img  src="/bubble.png" />
+
       </div>
     </div>
   );
