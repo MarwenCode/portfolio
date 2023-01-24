@@ -95,9 +95,9 @@ const Home = () => {
       </div>
       <div className="projects">
         <h2>
-          Projects{" "}
+          Projects
           <span onClick={() => setShowModal((prev) => !prev)}>
-            {" "}
+        
             clic me to learn more !
           </span>
         </h2>
