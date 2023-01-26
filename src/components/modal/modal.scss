@@ -8,7 +8,7 @@
   
     z-index: 1;
   
-    background-color: rgba(92, 84, 84, 0.568);
+    background-color: rgba(75, 69, 69, 0.568);
   
     width: 60%;
     // height: 110vh;
@@ -33,9 +33,10 @@
     .wrapper {
         width: 70%;
         height: 90%;
-        background-color: rgb(240, 241, 241);
+        background-color: rgb(27, 31, 31);
         overflow-y: scroll;
         transform: translate(20%,5%);
+        padding: 10px;
       
        
     }

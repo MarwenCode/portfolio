@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { GrDownload } from "react-icons/gr";
+import {FaHandPointLeft} from "react-icons/fa"
 import { FaLinkedin, FaTwitter, FaEnvelope, FaGithub } from "react-icons/fa";
 import Modal from "../modal/Modal";
 
@@ -45,7 +46,7 @@ const Home = () => {
           push myself to become a better developer. Today, I am proud to say
           that I have built multiple projects using React.Js and am constantly
           looking to improve and expand my knowledge. I am excited to share my
-          journey and projects with you on my portfolio website
+          journey and projects with you on my portfolio website.
         </p>
       </div>
       <div className="skills">
@@ -98,7 +99,7 @@ const Home = () => {
           Projects
           <span onClick={() => setShowModal((prev) => !prev)}>
         
-            clic me to learn more !
+            clic me to learn more ! <FaHandPointLeft />
           </span>
         </h2>
 
@@ -120,7 +121,7 @@ const Home = () => {
           <div className="project">
             <div className="top">
               <span>Social-Media</span>
-              <img src="/blog.png" />
+              <img src="/social-media.png" />
             </div>
             <div className="links">
               <span>Code</span>
@@ -131,7 +132,7 @@ const Home = () => {
           <div className="project">
             <div className="top">
               <span>Job-app</span>
-              <img src="/blog.png" />
+              <img src="/job-app.png" />
             </div>
             <div className="links">
               <span>Code</span>
@@ -142,7 +143,7 @@ const Home = () => {
           <div className="project">
             <div className="top">
               <span>E-Commerce</span>
-              <img src="/blog.png" />
+              <img src="/e-commerce.png" />
             </div>
             <div className="links">
               <span>Code</span>
@@ -153,7 +154,7 @@ const Home = () => {
           <div className="project">
             <div className="top">
               <span>Dashboard</span>
-              <img src="/blog.png" />
+              <img src="/dashboard.png" />
             </div>
             <div className="links">
               <span>Code</span>
@@ -182,7 +183,7 @@ const Home = () => {
           </div>
         </section>
       </div>
-      <div className="bubbles">
+      {/* <div className="bubbles">
         <img  src="/bubble.png" />
         <img  src="/bubble.png" />
         <img  src="/bubble.png" />
@@ -191,7 +192,7 @@ const Home = () => {
         <img  src="/bubble.png" />
         <img  src="/bubble.png" />
 
-      </div>
+      </div> */}
     </div>
   );
 };
