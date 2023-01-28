@@ -113,9 +113,10 @@ const Home = () => {
             </div>
 
             <div className="links">
-              <span>Code</span>
+          
+              <span><a href="https://github.com/MarwenCode/Blog-app">Code</a></span>
               <span>Demo</span>
-              <span>app</span>
+              <span><a href="https://blog-app-frontend.onrender.com">App</a></span>
             </div>
           </div>
           <div className="project">
@@ -124,9 +125,9 @@ const Home = () => {
               <img src="/social-media.png" />
             </div>
             <div className="links">
-              <span>Code</span>
+            <span><a href="https://github.com/MarwenCode/SocialMedia.app">Code</a></span>
               <span>Demo</span>
-              <span>app</span>
+              <span><a href="https://social-media-app-a6lq.onrender.com">App</a></span>
             </div>
           </div>
           <div className="project">
@@ -135,9 +136,9 @@ const Home = () => {
               <img src="/job-app.png" />
             </div>
             <div className="links">
-              <span>Code</span>
+            <span><a href="https://github.com/MarwenCode/Job-app">Code</a></span>
               <span>Demo</span>
-              <span>app</span>
+              <span><a href="https://job-app-client.onrender.com/register">App</a></span>
             </div>
           </div>
           <div className="project">
@@ -146,9 +147,9 @@ const Home = () => {
               <img src="/e-commerce.png" />
             </div>
             <div className="links">
-              <span>Code</span>
+            <span><a href="https://github.com/MarwenCode/E-commerce-app">Code</a></span>
               <span>Demo</span>
-              <span>app</span>
+              <span><a href="https://e-commerce-app-7nc0.onrender.com">App</a></span>
             </div>
           </div>
           <div className="project">
@@ -161,6 +162,15 @@ const Home = () => {
               <span>Demo</span>
               <span>app</span>
             </div>
+          </div>
+          <div className="demo">
+            <p>To try the apps, please use the demo credentials:</p>
+            <div className="sign">
+            <span>e-email : demo@mail.com</span>
+            <span>password : 123456</span>
+
+            </div>
+           
           </div>
         </div>
       </div>

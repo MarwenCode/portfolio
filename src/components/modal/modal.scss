@@ -36,7 +36,11 @@
         background-color: rgb(27, 31, 31);
         overflow-y: scroll;
         transform: translate(20%,5%);
-        padding: 10px;
+        padding: 20px;
+
+        .project {
+          padding: 10px;
+        }
       
        
     }

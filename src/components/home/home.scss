@@ -213,7 +213,10 @@
         .links {
           display: flex;
           justify-content: space-around;
-          span {
+          
+          span a {
+            text-decoration: none;
+            color: inherit;
           }
         }
       }
@@ -223,6 +226,25 @@
         background-color: rgb(4, 11, 116);
         color: white;
         transition: all 1s ease;
+      }
+
+      .demo {
+        display: block;
+        color: rgb(4, 11, 116); 
+        animation: demo 3s ease infinite alternate;
+
+        .sign span {
+          display: block;
+        }
+      }
+
+      @keyframes demo {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
       }
       // .project2 {
       //   background-color: #5997d1;
