@@ -11,14 +11,14 @@ const Modal = ({ setShowModal }) => {
         <div className="project">
           <h3>Blog-app</h3>
           <p>
-            Introducing the Blog-app, a dynamic platform for creative
+            A dynamic platform for creative
             expression! As a ReactJS developer, I utilized the MERN stack and
             Context API to bring this project to life. With features like
             authentication, the ability to create, edit, and personalize your
             own blog, complete with images and descriptions, this platform
             offers a unique and powerful platform for bloggers to showcase their
             ideas and thoughts. i made this project using the MERN stack &
-            context APi.
+            context API.
           </p>
         </div>
         <div className="project">
@@ -30,17 +30,14 @@ const Modal = ({ setShowModal }) => {
             others by creating, commenting on, and liking posts. With the
             ability to upload images and share their thoughts and experiences,
             this social media platform offers a unique and personalized
-            experience for users to connect with one another.
+            experience for users to connect with one another by the chat messages.
           </p>
         </div>
         <div className="project">
           <h3>Job-app</h3>
           <p>
-            Introducing the Job-app for Developers, a comprehensive platform
-            designed to connect recruiters with skilled developers. With this
-            app, recruiters can easily find the right talent for their company
-            by searching through a diverse pool of developers with different
-            programming languages expertise. Developers can showcase their
+            A comprehensive platform
+            designed to connect recruiters with skilled developers. Developers can showcase their
             skills and share their thoughts on the app's forum. The app features
             advanced search filters, making it easy for recruiters to find the
             best future employee. Developed with the MERN stack, the Job-app for
@@ -53,11 +50,8 @@ const Modal = ({ setShowModal }) => {
           <p>
             The fourth project is a feature-packed e-commerce platform for
             mobile phones. This platform enables users to effortlessly browse
-            and purchase the latest mobile phone products. The user-friendly
-            interface and an intuitive shopping cart system make it easy for
-            customers to find their perfect phone and complete their purchase
-            with ease. This platform was built using the MERN stack, ensuring a
-            seamless and efficient user experience
+            and purchase  mobile phone products. This platform was built using the MERN stack, ensuring a
+            seamless and efficient user experience. The user can create add products on his cart and make the purchase.
           </p>
         </div>
         <div className="project">
