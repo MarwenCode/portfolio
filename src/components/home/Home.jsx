@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { GrDownload } from "react-icons/gr";
-import {FaHandPointLeft} from "react-icons/fa"
+import { FaHandPointLeft } from "react-icons/fa";
 import { FaLinkedin, FaTwitter, FaEnvelope, FaGithub } from "react-icons/fa";
 import Modal from "../modal/Modal";
 
@@ -98,7 +98,6 @@ const Home = () => {
         <h2>
           Projects
           <span onClick={() => setShowModal((prev) => !prev)}>
-        
             clic me to learn more ! <FaHandPointLeft />
           </span>
         </h2>
@@ -113,23 +112,34 @@ const Home = () => {
             </div>
 
             <div className="links">
-          
-              <span><a href="https://github.com/MarwenCode/Blog-app">Code</a></span>
-              <span>Demo</span>
-              <span><a href="https://blog-app-frontend.onrender.com">App</a></span>
+              <span>
+                <a href="https://github.com/MarwenCode/Blog-app">Code</a>
+              </span>
+              <span>
+                <a href="https://www.youtube.com/watch?v=6IyZaA4aD04">Demo</a>
+              </span>
+              <span>
+                <a href="https://blog-app-frontend.onrender.com">App</a>
+              </span>
             </div>
           </div>
           <div className="project">
             <div className="top">
               <span>Social-Media</span>
               <img src="/social-media.png" />
-             
-
             </div>
             <div className="links">
-            <span><a href="https://github.com/MarwenCode/SocialMedia.app">Code</a></span>
-              <span><a href="https://www.youtube.com/watch?v=rG3fQKMPoKg&t=184s">Demo</a></span>
-              <span><a href="https://social-media-app-a6lq.onrender.com">App</a></span>
+              <span>
+                <a href="https://github.com/MarwenCode/SocialMedia.app">Code</a>
+              </span>
+              <span>
+                <a href="https://www.youtube.com/watch?v=rG3fQKMPoKg&t=184s">
+                  Demo
+                </a>
+              </span>
+              <span>
+                <a href="https://social-media-app-a6lq.onrender.com">App</a>
+              </span>
             </div>
           </div>
           <div className="project">
@@ -138,9 +148,15 @@ const Home = () => {
               <img src="/job-app.png" />
             </div>
             <div className="links">
-            <span><a href="https://github.com/MarwenCode/Job-app">Code</a></span>
-                 <span><a href="https://www.youtube.com/watch?v=LEU91zAsosg">Demo</a></span>
-              <span><a href="https://job-app-client.onrender.com">App</a></span>
+              <span>
+                <a href="https://github.com/MarwenCode/Job-app">Code</a>
+              </span>
+              <span>
+                <a href="https://www.youtube.com/watch?v=LEU91zAsosg">Demo</a>
+              </span>
+              <span>
+                <a href="https://job-app-client.onrender.com">App</a>
+              </span>
             </div>
           </div>
           <div className="project">
@@ -149,9 +165,13 @@ const Home = () => {
               <img src="/e-commerce.png" />
             </div>
             <div className="links">
-            <span><a href="https://github.com/MarwenCode/E-commerce-app">Code</a></span>
+              <span>
+                <a href="https://github.com/MarwenCode/E-commerce-app">Code</a>
+              </span>
               <span>Demo</span>
-              <span><a href="https://e-commerce-app-7nc0.onrender.com">App</a></span>
+              <span>
+                <a href="https://e-commerce-app-7nc0.onrender.com">App</a>
+              </span>
             </div>
           </div>
           <div className="project">
@@ -160,19 +180,25 @@ const Home = () => {
               <img src="/dashboard.png" />
             </div>
             <div className="links">
-            <span><a href="https://github.com/MarwenCode/Dashboard-admin-app">Code</a></span>
-                 <span><a href="https://www.youtube.com/watch?v=-n6lSUpue4A">Demo</a></span>
-              <span><a href="https://dashboard-app-marwen.onrender.com">App</a></span>
+              <span>
+                <a href="https://github.com/MarwenCode/Dashboard-admin-app">
+                  Code
+                </a>
+              </span>
+              <span>
+                <a href="https://www.youtube.com/watch?v=-n6lSUpue4A">Demo</a>
+              </span>
+              <span>
+                <a href="https://dashboard-app-marwen.onrender.com">App</a>
+              </span>
             </div>
           </div>
           <div className="demo">
             <p>To try the apps, please use the demo credentials:</p>
             <div className="sign">
-            <span>e-email : demo@mail.com</span>
-            <span>password : 7xB!*2</span>
-
+              <span>e-email : demo@mail.com</span>
+              <span>password : 7xB!*2</span>
             </div>
-           
           </div>
         </div>
       </div>
