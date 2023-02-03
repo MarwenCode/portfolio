@@ -25,8 +25,7 @@ const Home = () => {
         <div className="left">
           <h2>Marwen Jdidi</h2>
           <span>React JS developer</span>
-          {/* <span className="cv" onClick={handleDownload}> */}
-          <span className="cv" >
+          <span className="cv" onClick={handleDownload}>
             Download CV
             <abbr title="clic here to download CV">
               <GrDownload style={{ fontSize: "20px" }} className="icon" />
@@ -140,7 +139,7 @@ const Home = () => {
             </div>
             <div className="links">
             <span><a href="https://github.com/MarwenCode/Job-app">Code</a></span>
-              <span>Demo</span>
+                 <span><a href="https://www.youtube.com/watch?v=LEU91zAsosg">Demo</a></span>
               <span><a href="https://job-app-client.onrender.com">App</a></span>
             </div>
           </div>
