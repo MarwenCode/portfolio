@@ -168,7 +168,8 @@ const Home = () => {
               <span>
                 <a href="https://github.com/MarwenCode/E-commerce-app">Code</a>
               </span>
-              <span>Demo</span>
+              <a href=" https://www.youtube.com/watch?v=1_PmCTz0fZA">Demo</a>
+             
               <span>
                 <a href="https://e-commerce-app-7nc0.onrender.com">App</a>
               </span>
