@@ -1,10 +1,14 @@
 .home {
+  // overflow: hidden;
+
+
   
   .header {
     display: flex;
     // transform: translate(50%,10%);
     justify-content: space-evenly;
     margin-top: 100px;
+ 
 
     .right {
       img {
@@ -41,6 +45,7 @@
         border-radius: 20px;
         background-color: rgb(167, 154, 154);
         color: rgb(31, 29, 29);
+        margin-top: 20px;
 
         .icon {
          color: #ccc;
@@ -66,6 +71,7 @@
     transform: translate(20%, 10%);
     // margin-left: 150px;
     position: relative;
+   
 
     .about h2 {
       font-size: 2em;
@@ -104,24 +110,37 @@
 
   .skills {
     margin-top: 100px;
+    padding: 2em;
+    text-align: center;
+    width: 70%;
+    transform: translate(20%, 10%);
+    // margin-left: 150px;
+    position: relative;
+   
 
     h2 {
-      margin-left: 710px;
+      // margin-left: 710px;
       // background-color: #ccc;
       // width: 100px;
       // padding: 10px;
       // border-radius: 30px;
       // align-items: center;
+      
+  
+        font-size: 2em;
+        margin-bottom: 1em;
+      
+      
     }
 
     .items {
       display: flex;
 
       grid-gap: 20px;
-      margin-left: 293px;
+      // margin-left: 293px;
       margin-top: 30px;
       gap: 20px;
-      cursor: pointer;
+      // cursor: pointer;
       color: black;
 
       .item {
@@ -156,10 +175,19 @@
     background-color: rgb(237, 236, 243);
     // background-color: rgb(255, 247, 247);
     // background-image: url('./../../../public/background.png');
+    margin-top: 100px;
+    margin-bottom: 200px;
+    height: 750px;
+    padding: 2em;
+    text-align: center;
+ 
+    // margin-left: 150px;
+    position: relative;
     
     h2 {
-      margin-left: 710px;
-      margin-top: 50px;
+      // margin-left: 710px;
+      margin-top: 30px;
+      margin-bottom: 50px;
       cursor: pointer;
       color: black;
     
@@ -171,73 +199,31 @@
        
       }
     }
-   
-    .sideprojects {
-      // display: flex;
-      display: grid;
-      grid-template: 150px / auto auto auto;
-      display: grid;
-      // grid-template-columns: 150px auto auto auto;
-      grid-gap: 90px;
-      padding: 10px;
-      //   width: 60%;
-      justify-content: space-around;
-      align-items: center;
 
-      margin-left: 150px;
-      margin-top: 100px;
+    .sidepro {
+      position: absolute;
+     
 
-      .project {
-        background-color: #1b0c44;
-        width: 70%;
-        height: 250px;
-        margin-right: 30px;
-        border-radius: 20px;
-        box-shadow: 0 10px 15px rgb(121, 118, 118);
-        cursor: pointer;
-       color:white;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      .proj {
+        margin-bottom: -150px;
+        
+       
 
-        .top {
-          span {
-            margin-left: 25px;
-          }
-          img {
-            width: 100%;
-            height: 170px;
-            object-fit: cover;
-            padding: 10px;
-          }
-        }
 
-        .links {
-          display: flex;
-          justify-content: space-around;
-          
-          span a {
-            text-decoration: none;
-            color: inherit;
-          }
-        }
-      }
-
-      .project:hover {
-        // background-color: rgb(40, 39, 41);
-        background-color: rgb(4, 11, 116);
-        color: white;
-        transition: all 1s ease;
       }
 
       .demo {
+        margin-left: 75%;
+        width: 250px;
         display: block;
         color: rgb(4, 11, 116); 
         animation: demo 3s ease infinite alternate;
-
+  
         .sign span {
           display: block;
         }
       }
-
+  
       @keyframes demo {
         from {
           opacity: 0;
@@ -246,37 +232,20 @@
           opacity: 1;
         }
       }
-      // .project2 {
-      //   background-color: #5997d1;
-      //   width: 60%;
-      //   height: 250px;
-      //   margin-right: 30px;
-      // }
-      // .project3 {
-      //   background-color: #8dc533;
-      //   width: 60%;
-      //   height: 250px;
-      //   margin-right: 30px;
-      // }
-      // .project4 {
-      //   background-color: #6c36c2;
-      //   width: 60%;
-      //   height: 250px;
-      //   margin-right: 30px;
-      // }
-      // .project5 {
-      //   background-color: #d33dbf;
-      //   width: 60%;
-      //   height: 250px;
-      //   margin-right: 30px;
-      // }
+
+
+
     }
+
+  
+  
   }
 
   .contact {
     padding: 2rem;
     text-align: center;
-    margin-top: 100px;
+    margin-top: -200px;
+  
 
     position: relative;
 
@@ -385,7 +354,7 @@
  
 }
 
-@media (max-width: 500px) {
+@media (max-width: 300px) {
   .home {
     .header {
       flex-wrap: wrap;

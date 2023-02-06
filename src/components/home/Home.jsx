@@ -3,18 +3,56 @@ import { GrDownload } from "react-icons/gr";
 import { FaHandPointLeft } from "react-icons/fa";
 import { FaLinkedin, FaTwitter, FaEnvelope, FaGithub } from "react-icons/fa";
 import Modal from "../modal/Modal";
+import About from "../about/About";
 
 import "./home.scss";
+import Projects from "../projects/Projects";
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/dev-cv.pdf";
-    link.download = "dev-cv.pdf";
+    link.href = "/202302_Marwen_JDIDI_Dev_React_JS.pdf";
+    link.download = "202302_Marwen_JDIDI_Dev_React_JS.pdf";
     link.click();
   };
+
+  const [showPlayer, setShowPlayer] = useState(false);
+  const videos = [
+    {
+      id: 1,
+      title: "Blog-app",
+      src: "https://www.youtube.com/embed/6IyZaA4aD04",
+    },
+    {
+      id: 2,
+      title: "Video 2",
+      src: "https://www.youtube.com/embed/rG3fQKMPoKg",
+    },
+    {
+      id: 3,
+      title: "Job-app",
+      src: "https://www.youtube.com/embed/LEU91zAsosg",
+    },
+    {
+      id: 4,
+      title: "Video 4",
+      src: "https://www.youtube.com/embed/1_PmCTz0fZA",
+    },
+    {
+      id: 5,
+      title: "Video 5",
+      src: "https://www.youtube.com/embed/-n6lSUpue4A",
+    },
+  ];
+
+ 
+
+  // const handleClick = (id) => {
+  //   setShowPlayer(true);
+  //   setVideoId(id);
+  // };
 
   return (
     <div className="home">
@@ -35,8 +73,33 @@ const Home = () => {
       </div>
 
       <div className="about">
-        <h2>My story</h2>
+        <h2>Pourquoi ce portfolio ?</h2>
         <p>
+          travailler en tant que développeur chez un acteur reconnu du
+          développement application web avec React JS principalement.
+        </p>
+        <h2>Passion</h2>
+        <p>
+          Je suis devenu passionné par le développement web en autodidacte et je
+          souhaitais mettre mes compétences en pratique. Mon portfolio est donc
+          une opportunité pour moi de montrer mes projets réalisés, mes
+          connaissances techniques et mon développement personnel en tant que
+          développeur web. Je suis également motivé par l'envie de trouver de
+          nouveaux défis et opportunités pour continuer à progresser dans ce
+          domaine passionnant.
+        </p>
+        <h2>L 'histoire a commencé depuis ...</h2>
+        <p>
+          J'ai commencé à m'intéresser au développement web il y a plus d'un an
+          et j'ai décidé de me former en autodidacte. Mes sources d'inspiration
+          étaient des blogs techniques, des forums et des tutoriels en ligne.
+          Chaque soir après le travail et chaque week-end, j'ai consacré du
+          temps à apprendre les bases du développement web et à mettre en
+          pratique ce que j'ai appris en réalisant des projets personnels. Au
+          fil du temps, j'ai développé mes compétences et je suis devenu plus
+          passionné par ce domaine.
+        </p>
+        {/* <p>
           Hello, my name is Marwen and I am a self-taught developer. I have been
           passionate about coding for the past 2 years and have been dedicating
           my free time to learning and building projects on my own. I started by
@@ -47,7 +110,8 @@ const Home = () => {
           that I have built multiple projects using React.Js and am constantly
           looking to improve and expand my knowledge. I am excited to share my
           journey and projects with you on my portfolio website.
-        </p>
+        </p> */}
+        {/* <About /> */}
       </div>
       <div className="skills">
         <h2>Skills</h2>
@@ -96,34 +160,51 @@ const Home = () => {
       </div>
       <div className="projects">
         <h2>
-          Projects
+          Quelques-une de mes réalisations
           <span onClick={() => setShowModal((prev) => !prev)}>
-            clic me to learn more ! <FaHandPointLeft />
+            {/* clic me to learn more ! <FaHandPointLeft /> */}
           </span>
         </h2>
 
-        {showModal && <Modal setShowModal={setShowModal} />}
+        <div className="sidepro">
+          {/* {showModal && <Modal setShowModal={setShowModal} />} */}
 
-        <div className="sideprojects">
-          <div className="project">
+          {/* <div className="project">
+            <div className="hover">
+              <span>
+                A dynamic platform for creative expression! As a ReactJS
+                developer, I utilized the MERN stack and Context API to bring
+                this project to life. With features like authentication, the
+                API.
+              </span>
+            </div>
             <div className="top">
               <span>Blog-app</span>
               <img src="/blog.png" />
             </div>
-
             <div className="links">
               <span>
                 <a href="https://github.com/MarwenCode/Blog-app">Code</a>
               </span>
               <span>
                 <a href="https://www.youtube.com/watch?v=6IyZaA4aD04">Demo</a>
+                
               </span>
               <span>
                 <a href="https://blog-app-frontend.onrender.com">App</a>
               </span>
             </div>
-          </div>
-          <div className="project">
+          </div> */}
+          
+          {/* <div className="project">
+            <div className="hover">
+              <span>
+                A dynamic platform for creative expression! As a ReactJS
+                developer, I utilized the MERN stack and Context API to bring
+                this project to life. With features like authentication, the
+                API.
+              </span>
+            </div>
             <div className="top">
               <span>Social-Media</span>
               <img src="/social-media.png" />
@@ -133,7 +214,7 @@ const Home = () => {
                 <a href="https://github.com/MarwenCode/SocialMedia.app">Code</a>
               </span>
               <span>
-                <a href="https://www.youtube.com/watch?v=rG3fQKMPoKg&t=184s">
+                <a href="https://www.youtube.com/watch?v=rG3fQKMPoKg">
                   Demo
                 </a>
               </span>
@@ -141,8 +222,60 @@ const Home = () => {
                 <a href="https://social-media-app-a6lq.onrender.com">App</a>
               </span>
             </div>
-          </div>
+          </div> */}
+          {/* <div className="project">
+            <div className="hover">
+              <span>
+                A dynamic platform for creative expression! As a ReactJS
+                developer, I utilized the MERN stack and Context API to bring
+                this project to life. With features like authentication, the
+                API.
+              </span>
+            </div>
+            <div className="top">
+              <span>Social-Media</span>
+              <img src="/social-media.png" />
+            </div>
+            <div className="links">
+              <span>
+                <a href="https://github.com/MarwenCode/SocialMedia.app">Code</a>
+              </span>
+              <span>
+                <a onClick={() => setShowPlayer((prev) => !prev)}>Demo</a>
+              </span>
+              <span>
+                <a href="https://social-media-app-a6lq.onrender.com">App</a>
+              </span>
+            </div>
+            <div className="video-container">
+              {showPlayer && (
+                <>
+                  <button onClick={() => setShowPlayer((prev) => !prev)}>
+                    x
+                  </button>
+
+                  <iframe
+                    title="Social-Media-Demo"
+                    src="https://www.youtube.com/embed/rG3fQKMPoKg"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="iframe"
+                  />
+                </>
+              )}
+            </div>
+          </div> */}
+{/* 
           <div className="project">
+            <div className="hover">
+              <span>
+                A dynamic platform for creative expression! As a ReactJS
+                developer, I utilized the MERN stack and Context API to bring
+                this project to life. With features like authentication, the
+                API.
+              </span>
+            </div>
             <div className="top">
               <span>Job-app</span>
               <img src="/job-app.png" />
@@ -158,8 +291,16 @@ const Home = () => {
                 <a href="https://job-app-client.onrender.com">App</a>
               </span>
             </div>
-          </div>
-          <div className="project">
+          </div> */}
+          {/* <div className="project">
+            <div className="hover">
+              <span>
+                A dynamic platform for creative expression! As a ReactJS
+                developer, I utilized the MERN stack and Context API to bring
+                this project to life. With features like authentication, the
+                API.
+              </span>
+            </div>
             <div className="top">
               <span>E-Commerce</span>
               <img src="/e-commerce.png" />
@@ -168,14 +309,24 @@ const Home = () => {
               <span>
                 <a href="https://github.com/MarwenCode/E-commerce-app">Code</a>
               </span>
-              <a href=" https://www.youtube.com/watch?v=1_PmCTz0fZA">Demo</a>
-             
+              <span>
+                <a href=" https://www.youtube.com/watch?v=1_PmCTz0fZA">Demo</a>
+              </span>
+
               <span>
                 <a href="https://e-commerce-app-7nc0.onrender.com">App</a>
               </span>
             </div>
-          </div>
-          <div className="project">
+          </div> */}
+          {/* <div className="project">
+            <div className="hover">
+              <span>
+                A dynamic platform for creative expression! As a ReactJS
+                developer, I utilized the MERN stack and Context API to bring
+                this project to life. With features like authentication, the
+                API.
+              </span>
+            </div>
             <div className="top">
               <span>Dashboard</span>
               <img src="/dashboard.png" />
@@ -193,9 +344,17 @@ const Home = () => {
                 <a href="https://dashboard-app-marwen.onrender.com">App</a>
               </span>
             </div>
+          </div> */}
+          <div className="proj">
+          <Projects />
+
           </div>
+          
           <div className="demo">
-            <p>To try the apps, please use the demo credentials:</p>
+            <p>
+              Essayez les applications en utilisant les identifiants de
+              démonstration suivants:
+            </p>
             <div className="sign">
               <span>e-email : demo@mail.com</span>
               <span>password : 7xB!*2</span>
@@ -207,7 +366,7 @@ const Home = () => {
         <section id="contact">
           <h2>Contact</h2>
           <div className="contact-links">
-            <a href="https://www.linkedin.com/in/marwen-jdidi-69668344">
+            <a href="https://www.linkedin.com/in/marwen-dev-react-js">
               <FaLinkedin size={32} />
             </a>
             <a href="https://twitter.com/MarwenCode">
