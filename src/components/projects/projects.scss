@@ -1,10 +1,10 @@
 .sideprojects {
   // display: flex;
   display: grid;
-  grid-template: 150px / auto auto auto;
+  grid-template: 150px  / auto auto auto;
   display: grid;
   // grid-template-columns: 150px auto auto auto;
-  grid-gap: 160px;
+  grid-gap: 120px;
   padding: 10px;
   //   width: 60%;
   justify-content: space-around;
@@ -13,11 +13,14 @@
   // margin-left: 150px;
   margin-top: 10px;
   position: relative;
+  // margin-left: 70px;
+  width: 90%;
+  
  
 
   .project {
     background-color: #1b0c44;
-    width: 80%;
+    width: 90%;
     height: 250px;
     margin-right: 30px;
     border-radius: 20px;
@@ -28,6 +31,7 @@
    
 
     position: relative;
+  
 
     .hover {
       position: absolute;
@@ -37,7 +41,7 @@
       // background-color :beige;
       background-color: #1b0c44;
       color: white;
-      width: 250px;
+      width: 350px;
       top: -160px;
       padding: 10px;
       opacity: 0;
@@ -158,4 +162,18 @@
   //   height: 250px;
   //   margin-right: 30px;
   // }
+}
+
+
+@media only screen and (min-width: 400px) and (max-width: 1023px) {
+  .sideprojects {
+    width: 100%;
+    margin-left: 0;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 50px;
+
+    .project {
+      width: 100%;
+    }
+  }
 }

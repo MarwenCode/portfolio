@@ -9,7 +9,7 @@ const Projects = () => {
       title: "Blog-app",
       src: "https://www.youtube.com/watch?v=6IyZaA4aD04",
       description:
-        "A dynamic platform for creative expression! As a ReactJS developer, I utilized the MERN stack and Context API to bring this project to life. With features like authentication, the API.",
+        "J'ai développé l'application blog-app pour acquérir une compréhension solide des fondamentaux de REACT JS. Mon objectif était de créer une application CRUD (create, read, update et delete) pour mettre en pratique mes connaissances.",
       image: "/blog.png",
       code:"https://github.com/MarwenCode/Blog-app",
       app:"https://blog-app-frontend.onrender.com",
@@ -18,7 +18,7 @@ const Projects = () => {
       title: "Social-Media",
       src: "https://www.youtube.com/watch?v=rG3fQKMPoKg",
       description:
-        "A dynamic platform for creative expression! As a ReactJS developer, I utilized the MERN stack and Context API to bring this project to life. With features like authentication, the API.",
+        "J'ai développé cette application  social-media pour renforcer mes connaissances en matière de maîtrise d'une API REST et de MongoDB. J'ai utilisé le Hook useContext de React JS pour mieux comprendre la gestion des states, ce qui m'a permis d'améliorer mes compétences dans la gestions des données entre le Backend et me Frontend.",
       image: "/social-media.png",
       code:"https://github.com/MarwenCode/SocialMedia.app",
       app:"https://social-media-app-a6lq.onrender.com"
@@ -27,7 +27,7 @@ const Projects = () => {
       title: "Job-app",
       src: "https://www.youtube.com/watch?v=LEU91zAsosg",
       description:
-        "A dynamic platform for creative expression! As a ReactJS developer, I utilized the MERN stack and Context API to bring this project to life. With features like authentication, the API.",
+        "Cette application permet de faciliter la recherche d'offres d'emploi pour les développeurs en se concentrant sur leurs spécialités. En utilisant cette application, j'ai amélioré mes compétences en matière de gestion des états avec React JS,  j'ai également appris à effectuer des filtrages de données pour afficher des résultats en fonction de critères prédéterminés et de maîtriser les opérations CRUD.",
       image: "/job-app.png",
       code:"https://github.com/MarwenCode/Job-app",
       app:"https://job-app-client.onrender.com"
@@ -36,7 +36,7 @@ const Projects = () => {
       title: "E-Commerce-app",
       src: "https://www.youtube.com/watch?v=1_PmCTz0fZA",
       description:
-        "A dynamic platform for creative expression! As a ReactJS developer, I utilized the MERN stack and Context API to bring this project to life. With features like authentication, the API.",
+        "J'ai conçu ce site e-commerce pour renforcer mes compétences en matière de Hooks de React JS, en particulier useContext et useReducer. Ceux-ci ont permis une gestion efficace du panier d'achats, en suivant les quantités et les totaux des commandes en temps réel lorsque les utilisateurs ajoutent des articles.",
       image: "/e-commerce.png",
       code:"https://github.com/MarwenCode/E-commerce-app",
       app:"https://e-commerce-app-7nc0.onrender.com",
@@ -45,7 +45,7 @@ const Projects = () => {
       title: "Dashboard-app",
       src: "https://www.youtube.com/watch?v=-n6lSUpue4A",
       description:
-        "A dynamic platform for creative expression! As a ReactJS developer, I utilized the MERN stack and Context API to bring this project to life. With features like authentication, the API.",
+        "J'ai développé ce tableau de bord en utilisant Express JS, MongoDB et React JS afin de mieux maîtriser la gestion de la base de données et d'afficher les données à l'aide de Context API. J'ai également implémenté des fonctionnalités permettant de gérer efficacement les différents states de l'application. l'utilisateur la possibilité de gérer facilement les produits en stock et de communiquer avec les fournisseurs à l'aide d'un système de tickets de support intégré, permettant une gestion plus efficace de ses activités.",
       image: "/dashboard.png",
       code:"https://github.com/MarwenCode/Dashboard-admin-app",
       app:"https://dashboard-app-marwen.onrender.com"

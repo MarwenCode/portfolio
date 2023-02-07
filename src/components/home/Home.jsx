@@ -75,7 +75,7 @@ const Home = () => {
       <div className="about">
         <h2>Pourquoi ce portfolio ?</h2>
         <p>
-          travailler en tant que développeur chez un acteur reconnu du
+          Travailler en tant que développeur chez un acteur reconnu du
           développement application web avec React JS principalement.
         </p>
         <h2>Passion</h2>
@@ -356,7 +356,7 @@ const Home = () => {
               démonstration suivants:
             </p>
             <div className="sign">
-              <span>e-email : demo@mail.com</span>
+              <span>e-mail : demo@mail.com</span>
               <span>password : 7xB!*2</span>
             </div>
           </div>
