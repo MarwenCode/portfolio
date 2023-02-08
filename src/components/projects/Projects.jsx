@@ -45,7 +45,7 @@ const Projects = () => {
       title: "Dashboard-app",
       src: "https://www.youtube.com/watch?v=-n6lSUpue4A",
       description:
-        "J'ai développé ce tableau de bord en utilisant Express JS, MongoDB et React JS afin de mieux maîtriser la gestion de la base de données et d'afficher les données à l'aide de Context API. J'ai également implémenté des fonctionnalités permettant de gérer efficacement les différents states de l'application. l'utilisateur la possibilité de gérer facilement les produits en stock et de communiquer avec les fournisseurs à l'aide d'un système de tickets de support intégré, permettant une gestion plus efficace de ses activités.",
+        "J'ai développé ce tableau de bord en utilisant Express JS, MongoDB et React JS afin de mieux maîtriser la gestion de la base de données et d'afficher les données à l'aide de Context API. J'ai également implémenté des fonctionnalités permettant de gérer efficacement les différents states de l'application. l'utilisateur a la possibilité de gérer facilement les produits en stock et de communiquer avec les fournisseurs à l'aide d'un système de tickets de support intégré, permettant une gestion plus efficace de ses activités.",
       image: "/dashboard.png",
       code:"https://github.com/MarwenCode/Dashboard-admin-app",
       app:"https://dashboard-app-marwen.onrender.com"
