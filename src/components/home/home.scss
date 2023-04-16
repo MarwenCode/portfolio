@@ -78,7 +78,7 @@
     }
 
     p {
-      animation: fadeIn 2s ease-in;
+      animation: fadeIn 10s ease-in;
       // background-color: rgb(230, 226, 226);
       border-radius: 20px;
       width: 70%;
@@ -166,7 +166,7 @@
     // background-image: url('./../../../public/background.png');
     margin-top: 100px;
     margin-bottom: 200px;
-    height: 750px;
+    height: 850px;
     padding: 2em;
     text-align: center;
 
@@ -195,6 +195,7 @@
       }
 
       .demo {
+        margin-top: 150px;
         margin-left: 68%;
         width: 250px;
         display: block;

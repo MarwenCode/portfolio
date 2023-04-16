@@ -50,6 +50,15 @@ const Projects = () => {
       code:"https://github.com/MarwenCode/Dashboard-admin-app",
       app:"https://dashboard-app-marwen.onrender.com"
     },
+    {
+      title: "Notes-app (en cours )",
+      // src: "https://www.youtube.com/watch?v=-n6lSUpue4A",
+      description:
+        "L'application Notes permet aux utilisateurs de créer des notes avec des fonctionnalités avancées telles que l'enregistrement des notes en base de données MySQL, l'édition et la suppression de notes, ainsi que l'attribution de chaque note à une catégorie. Cette application est réalisée avec React JS, MySQL et Express JS. Les prochaines fonctionnalités incluent l'ajout d'un système de chat avec les utilisateurs en utilisant Socket.io et la création d'un gestionnaire de tâches similaire à Trello..",
+      // image: "/dashboard.png",
+      code:"https://github.com/MarwenCode/MIND-3",
+      // app:"https://dashboard-app-marwen.onrender.com"
+    },
   ];
 
   const handleClick = (videoId) => {
@@ -72,13 +81,29 @@ const Projects = () => {
           </div>
           <div className="links">
             <span>
-              <a href={video.code}>Code</a>
+              {video.code && (
+                 <a href={video.code}>Code</a>
+
+
+              )}
+             
             </span>
             <span>
-              <a href={video.app}>App</a>
+              {video.app && (
+                 <a href={video.app}>App</a>
+
+
+              )}
+             
             </span>
             <span>
-              <a  className="video" onClick={() => handleClick(video.src)}>Demo</a>
+
+              {video.src && (
+                  <a  className="video" onClick={() => handleClick(video.src)}>Demo</a>
+
+
+              )}
+            
             </span>
           </div>
           {showPlayer && (
