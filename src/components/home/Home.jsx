@@ -134,6 +134,16 @@ const Home = () => {
             <img src="/mongo.png" />
             <h5>MongoDB</h5>
           </span>
+          <span className="item"  >
+            <img src="/MySQL.png"  style={{
+            height:"70px", 
+            width:"70px"
+          
+            
+            
+            }}         />
+            <h5>MySQL</h5>
+          </span>
           <span className="item">
             <img src="/css.png" style={{ marginLeft: "-20px" }} />
             <h5>CSS </h5>
