@@ -51,8 +51,8 @@ const Projects = () => {
       app:"https://dashboard-app-marwen.onrender.com"
     },
     {
-      title: "Notes-app (en cours )",
-      // src: "https://www.youtube.com/watch?v=-n6lSUpue4A",
+      title: "Notes-Chat-app (en cours )",
+      src: "https://www.youtube.com/watch?v=T-CnRJ1D3D8",
       description:
         "L'application Notes permet aux utilisateurs de créer des notes avec des fonctionnalités avancées telles que l'enregistrement des notes en base de données MySQL, l'édition et la suppression de notes, ainsi que l'attribution de chaque note à une catégorie. Cette application est réalisée avec React JS, MySQL et Express JS. Les prochaines fonctionnalités incluent l'ajout d'un système de chat avec les utilisateurs en utilisant Socket.io et la création d'un gestionnaire de tâches similaire à Trello..",
       image: "/notes-app.png",
