@@ -106,10 +106,10 @@
     margin-top: 100px;
     padding: 2em;
     text-align: center;
-    width: 70%;
-    transform: translate(20%, 10%);
-    // margin-left: 150px;
-    position: relative;
+    // width: 80%;
+    // transform: translate(20%, 10%);
+    margin-left: 130px;
+    // position: relative;
 
     h2 {
       // margin-left: 710px;
@@ -121,6 +121,7 @@
 
       font-size: 2em;
       margin-bottom: 1em;
+      margin-right: 250px;
     
     }
 
@@ -133,6 +134,9 @@
       gap: 20px;
       // cursor: pointer;
       color: black;
+    
+      
+    
 
       .item {
         background-color: #fff;
@@ -141,6 +145,7 @@
         padding: 20px;
         align-self: center;
         padding-left: 20px;
+      
 
         img {
           width: 70px;
