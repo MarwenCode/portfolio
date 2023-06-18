@@ -13,8 +13,8 @@ const Home = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/202302_Marwen_JDIDI_Dev_React_JS.pdf";
-    link.download = "202302_Marwen_JDIDI_Dev_React_JS.pdf";
+    link.href = "/Marwen_JDIDI_Dev_React_JS.pdf";
+    link.download = "Marwen_JDIDI_Dev_React_JS.pdf";
     link.click();
   };
 
@@ -47,8 +47,6 @@ const Home = () => {
     },
   ];
 
- 
-
   // const handleClick = (id) => {
   //   setShowPlayer(true);
   //   setVideoId(id);
@@ -80,17 +78,16 @@ const Home = () => {
         </p>
         <h2>Passion</h2>
         <p>
-          Je suis devenu passionné par le développement web en autodidacte et je
-          souhaitais mettre mes compétences en pratique. Mon portfolio est donc
-          une opportunité pour moi de montrer mes projets réalisés, mes
-          connaissances techniques et mon développement personnel en tant que
-          développeur web. Je suis également motivé par l'envie de trouver de
+          je suis passionné et je souhaiterais mettre mes compétences en pratique au
+          sein d'une structure reconnue. Mon portfolio a été développé pour vous
+          montrer quelques uns de mes projets, mes compétences techniques et le
+          niveau que j'ai pu atteindre. Trés motivé j'ai envie de trouver de
           nouveaux défis et opportunités pour continuer à progresser dans ce
           domaine passionnant.
         </p>
         <h2>L 'histoire a commencé depuis ...</h2>
         <p>
-          J'ai commencé à m'intéresser au développement web il y a plus d'un an
+          J'ai commencé à m'intéresser au développement web il y a 2 ans
           et j'ai décidé de me former en autodidacte. Mes sources d'inspiration
           étaient des blogs techniques, des forums et des tutoriels en ligne.
           Chaque soir après le travail et chaque week-end, j'ai consacré du
@@ -134,14 +131,14 @@ const Home = () => {
             <img src="/mongo.png" />
             <h5>MongoDB</h5>
           </span>
-          <span className="item"  >
-            <img src="/MySQL.png"  style={{
-            height:"70px", 
-            width:"70px"
-          
-            
-            
-            }}         />
+          <span className="item">
+            <img
+              src="/MySQL.png"
+              style={{
+                height: "70px",
+                width: "70px",
+              }}
+            />
             <h5>MySQL</h5>
           </span>
           <span className="item">
@@ -177,12 +174,10 @@ const Home = () => {
         </h2>
 
         <div className="sidepro">
-          
           <div className="proj">
-          <Projects />
-
+            <Projects />
           </div>
-          
+
           <div className="demo">
             <p>
               Essayez les applications en utilisant les identifiants de
