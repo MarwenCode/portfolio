@@ -33,12 +33,12 @@ const Home = () => {
     <div className="home">
       <div className="about">
         <div className="presentation">
-          <span> Hey there! I'm</span> -
+          <span> Hey there! I'm</span>
           <p className="text">
             <span className="name">Marwen Jdidi</span>
           </p>
           <p className="text2">
-            I am a JavaScript/React. JS Developer who is passionate about web
+            a JavaScript/React. JS Developer who is passionate about web
             development. I have been self-teaching myself for the past three
             years and recently started a certificate program in
             JavaScript/ReactJS from OpenClassRooms to further enhance my skills.
