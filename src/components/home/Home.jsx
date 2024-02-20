@@ -123,7 +123,7 @@ const Home = () => {
       </div>
       <div className="projects">
         <h2>
-          Side Projects
+          Side Projects : under-construction ....coming soon
        
         </h2>
 
