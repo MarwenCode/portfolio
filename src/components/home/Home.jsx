@@ -4,6 +4,10 @@ import { FaLinkedin, FaTwitter, FaEnvelope, FaGithub } from "react-icons/fa";
 
 import "./home.scss";
 import Projects from "../projects/Projects";
+import emailjs from 'emailjs-com';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Home = () => {
 
@@ -27,6 +31,58 @@ const Home = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [e.target.name]: e.target.value,
+    }));
+  };
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    try {
+      console.log("Form data submitted:", formData);
+  
+      const form = e.target;  // Get the form element
+  
+      const result = await emailjs.sendForm(
+        'service_v0gmsdf',
+        'template_g73cyy8',
+        form,
+        'tGn9UVohsbbE7IH5z'
+      );
+  
+      console.log(result.text);
+      // Add any success handling or redirect here
+        // Show a success notification to the user
+        toast.success("Your message has been sent!");
+        setFormData({
+          name: '',
+          email: '',
+          message: '',
+        });
+       
+       
+    } catch (error) {
+      console.error(error);  // Log the entire error object for further investigation
+      console.log(error?.text || 'An error occurred');
+        // Show an error notification to the user
+        toast.error("An error occurred. Please try again.");
+    }
+  };
+  
+  
+  
  
 
   return (
@@ -147,6 +203,42 @@ const Home = () => {
       <div className="contact">
         <section id="contact">
           <h2>Contact</h2>
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="message">Message:</label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              ></textarea>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+          <ToastContainer />
           <div className="contact-links">
             <a href="https://www.linkedin.com/in/marwen-dev-react-js">
               <FaLinkedin size={32} />
