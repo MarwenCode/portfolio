@@ -179,7 +179,7 @@ const Home = () => {
       </div>
       <div className="projects">
         <h2>
-          Side Projects : under-construction ....coming soon
+          Side Projects
        
         </h2>
 
@@ -188,7 +188,7 @@ const Home = () => {
             <Projects />
           </div>
 
-          <div className="demo">
+          {/* <div className="demo">
             <p>
               Essayez les applications en utilisant les identifiants de
               démonstration suivants:
@@ -197,7 +197,7 @@ const Home = () => {
               <span>e-mail : demo@mail.com</span>
               <span>password : 7xB!*2</span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="contact">

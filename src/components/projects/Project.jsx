@@ -53,7 +53,7 @@ const Project = ({ video }) => {
         <div className="video-container">
           {selectedVideo === video.src && (
             <>
-              <button onClick={() => setShowPlayer(false)}>X</button>
+              <button  style={{color:'red'}}   onClick={() => setShowPlayer(false)}>X</button>
               <iframe
                 title={video.title}
                 width="560"
