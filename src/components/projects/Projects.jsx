@@ -53,7 +53,7 @@ const Projects = () => {
       title: "Notes-Chat-app (en cours )",
       src: "https://www.youtube.com/watch?v=uFReP-cA2CQ",
       description:
-        "L'application Notes permet aux utilisateurs de créer des notes avec des fonctionnalités avancées telles que l'enregistrement des notes en base de données MySQL, l'édition et la suppression de notes, ainsi que l'attribution de chaque note à une catégorie. Cette application est réalisée avec React JS, MySQL et Express JS. Les prochaines fonctionnalités incluent l'ajout d'un système de chat avec les utilisateurs en utilisant Socket.io et la création d'un gestionnaire de tâches similaire à Trello..",
+      "The Notes application allows users to create notes with advanced features such as saving notes in a MySQL database, editing and deleting notes, as well as assigning each note to a category. This application is built with React JS, MySQL, and Express JS. The upcoming features include adding a chat system with users using Socket.io and creating a task manager similar to Trello.",
       image: "/notes-app.png",
       code: "https://github.com/MarwenCode/MIND-3",
       app:"https://marwen-portfolio.onrender.com"
@@ -63,7 +63,7 @@ const Projects = () => {
       title: "E-Commerce-app",
       src: "https://www.youtube.com/watch?v=1_PmCTz0fZA",
       description:
-        "J'ai conçu ce site e-commerce pour renforcer mes compétences en matière de Hooks de React JS, en particulier useContext et useReducer. Ceux-ci ont permis une gestion efficace du panier d'achats, en suivant les quantités et les totaux des commandes en temps réel lorsque les utilisateurs ajoutent des articles.",
+      "I designed this e-commerce website to enhance my skills in React JS Hooks, particularly useContext and useReducer. These facilitated efficient management of the shopping cart, tracking quantities and order totals in real-time as users add items.",
       image: "/e-commerce.png",
       code: "https://github.com/MarwenCode/E-commerce-app",
       app: "https://e-commerce-app-7nc0.onrender.com",
@@ -72,7 +72,7 @@ const Projects = () => {
       title: "Dashboard-app",
       src: "https://www.youtube.com/watch?v=-n6lSUpue4A",
       description:
-        "J'ai développé ce tableau de bord en utilisant Express JS, MongoDB et React JS afin de mieux maîtriser la gestion de la base de données et d'afficher les données à l'aide de Context API. J'ai également implémenté des fonctionnalités permettant de gérer efficacement les différents states de l'application. l'utilisateur a la possibilité de gérer facilement les produits en stock et de communiquer avec les fournisseurs à l'aide d'un système de tickets de support intégré, permettant une gestion plus efficace de ses activités.",
+      "I developed this dashboard using Express JS, MongoDB, and React JS to better master database management and display data using the Context API. I also implemented features to efficiently handle various application states. Users can easily manage products in stock and communicate with suppliers using an integrated support ticket system, enabling more effective management of their activities.",
       image: "/dashboard.png",
       code: "https://github.com/MarwenCode/Dashboard-admin-app",
       app: "https://dashboard-app-marwen.onrender.com",
