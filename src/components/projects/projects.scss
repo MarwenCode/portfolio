@@ -1,20 +1,30 @@
 .sideprojects {
-  // display: flex;
-  display: grid;
-  grid-template: 150px  / auto auto auto;
-  display: grid;
-  // grid-template-columns: 150px auto auto auto;
-  grid-gap: 120px;
-  padding: 10px;
-  //   width: 60%;
-  justify-content: space-around;
-  align-items: center;
+  // // display: flex;
+  // display: grid;
+  // grid-template: 150px  / auto auto auto;
+  // display: grid;
+  // // grid-template-columns: 150px auto auto auto;
+  // grid-gap: 90px;
+  // padding: 10px;
+  // //   width: 60%;
+  // justify-content: space-around;
+  // align-items: center;
 
-  // margin-left: 150px;
-  margin-top: 10px;
-  position: relative;
-  // margin-left: 70px;
-  width: 90%;
+  // // margin-left: 150px;
+  // margin-top: 10px;
+  // position: relative;
+  // // margin-left: 70px;
+  // width: 90%;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Deux colonnes de largeur égale */
+  grid-auto-rows: auto; /* Hauteur automatique pour chaque ligne */
+  grid-gap: 20px; /* Espace entre les éléments */
+  padding: 10px;
+  justify-content: center; /* Centrer horizontalement les éléments */
+  align-items: center; /* Centrer verticalement les éléments */
+  width: 70%;
+  margin-left: 20%;
 
   .project {
     background-color: #1b0c44;
