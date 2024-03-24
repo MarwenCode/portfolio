@@ -47,7 +47,7 @@ const Projects = () => {
           "I developed a RESTful API for managing posts, incorporating features such as image uploads, comment editing, and deletion. I proficiently navigated the React ecosystem, employing techniques like the spread operator, conditional rendering, and state management with Redux Toolkit.",
        image: "/postshare.png",
        code: "https://github.com/MarwenCode/Post-Share",
-       app: "https://postshare-app.onrender.com/login",
+       app: "https://postshare-app.onrender.com",
     },
     {
       title: "Notes-Chat-app (en cours )",
