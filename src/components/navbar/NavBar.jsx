@@ -7,8 +7,8 @@ const NavBar = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Marwen_Jdidi_Resume_Dev_React_JS.pdf";
-    link.download = "Marwen_Jdidi_Resume_Dev_React_JS.pdf";
+    link.href = "/Marwen_Jdidi-Resume_Dev_React_JS.pdf";
+    link.download = "Marwen_Jdidi-Resume_Dev_React_JS.pdf";
     link.click();
   };
   return (
