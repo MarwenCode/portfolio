@@ -4,35 +4,31 @@ import { FaLinkedin, FaTwitter, FaEnvelope, FaGithub } from "react-icons/fa";
 
 import "./home.scss";
 import Projects from "../projects/Projects";
-import emailjs from 'emailjs-com';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
+import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Home = () => {
-
   const [isSkillsVisible, setIsSkillsVisible] = useState(false);
-
 
   useEffect(() => {
     const handleScroll = () => {
       const skillsSection = document.getElementById("skills-section");
       if (skillsSection) {
         const rect = skillsSection.getBoundingClientRect();
-        const isVisible = rect.top <= window.innerHeight / 2 && rect.bottom >= 0;
+        const isVisible =
+          rect.top <= window.innerHeight / 2 && rect.bottom >= 0;
         setIsSkillsVisible(isVisible);
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); 
+    handleScroll();
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-
 
   const [formData, setFormData] = useState({
     name: "",
@@ -46,44 +42,38 @@ const Home = () => {
       [e.target.name]: e.target.value,
     }));
   };
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     try {
       console.log("Form data submitted:", formData);
-  
-      const form = e.target;  // Get the form element
-  
+
+      const form = e.target; // Get the form element
+
       const result = await emailjs.sendForm(
-        'service_v0gmsdf',
-        'template_g73cyy8',
+        "service_v0gmsdf",
+        "template_g73cyy8",
         form,
-        'tGn9UVohsbbE7IH5z'
+        "tGn9UVohsbbE7IH5z"
       );
-  
+
       console.log(result.text);
       // Add any success handling or redirect here
-        // Show a success notification to the user
-        toast.success("Your message has been sent!");
-        setFormData({
-          name: '',
-          email: '',
-          message: '',
-        });
-       
-       
+      // Show a success notification to the user
+      toast.success("Your message has been sent!");
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
     } catch (error) {
-      console.error(error);  // Log the entire error object for further investigation
-      console.log(error?.text || 'An error occurred');
-        // Show an error notification to the user
-        toast.error("An error occurred. Please try again.");
+      console.error(error); // Log the entire error object for further investigation
+      console.log(error?.text || "An error occurred");
+      // Show an error notification to the user
+      toast.error("An error occurred. Please try again.");
     }
   };
-  
-  
-  
- 
 
   return (
     <div className="home">
@@ -125,7 +115,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className={`skills ${isSkillsVisible ? "visible" : ""}`} id="skills-section">
+      <div
+        className={`skills ${isSkillsVisible ? "visible" : ""}`}
+        id="skills-section">
         <h2>Skills</h2>
 
         <div class="skills-container">
@@ -178,26 +170,22 @@ const Home = () => {
         </div>
       </div>
       <div className="projects">
-        <h2>
-          Side Projects
-       
-        </h2>
+        <h2>Side Projects</h2>
 
         <div className="sidepro">
           <div className="proj">
             <Projects />
           </div>
 
-          {/* <div className="demo">
+          <div className="demo">
             <p>
-              Essayez les applications en utilisant les identifiants de
-              démonstration suivants:
+              To try the applications, you can use the following credentials:
             </p>
             <div className="sign">
-              <span>e-mail : demo@mail.com</span>
-              <span>password : 7xB!*2</span>
+              <span>e-mail: admin@gmail.com</span>
+              <span>password: 123456</span>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
       <div className="contact">
@@ -233,8 +221,7 @@ const Home = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                required
-              ></textarea>
+                required></textarea>
             </div>
             <button type="submit">Submit</button>
           </form>
