@@ -84,12 +84,10 @@ const Home = () => {
             <span className="name">Marwen Jdidi</span>
           </p>
           <p className="text2">
-            a JavaScript/React. JS Developer who is passionate about web
-            development. I have been self-teaching myself for the past three
-            years and recently started a certificate program in
-            JavaScript/ReactJS from OpenClassRooms to further enhance my skills.
-            I am excited to contribute to projects and continue my learning
-            journey in this dynamic field.
+          A JavaScript/React.js Developer passionate about web development. 
+          I have been self-teaching for the past three years and recently earned a certificate in JavaScript/React.js 
+          from OpenClassRooms to further enhance my skills. 
+          I am excited to contribute to projects and continue my learning journey in this dynamic field.
           </p>
           <div className="contact">
             <div className="contact-links">
