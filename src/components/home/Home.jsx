@@ -7,9 +7,12 @@ import Projects from "../projects/Projects";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import JavaScriptOnly from "../javaScriptOnly/JavaScriptOnly";
+import Intro from "../intro/Intro";
 
 const Home = () => {
   const [isSkillsVisible, setIsSkillsVisible] = useState(false);
+  const [isIntroVisible, setIsIntroVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -75,6 +78,16 @@ const Home = () => {
     }
   };
 
+ 
+
+  const handleMouseEnter = () => {
+    setIsIntroVisible(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsIntroVisible(false);
+  };
+
   return (
     <div className="home">
       <div className="about">
@@ -84,10 +97,11 @@ const Home = () => {
             <span className="name">Marwen Jdidi</span>
           </p>
           <p className="text2">
-          A JavaScript/React.js Developer passionate about web development. 
-          I have been self-teaching for the past three years and recently earned a certificate in JavaScript/React.js 
-          from OpenClassRooms to further enhance my skills. 
-          I am excited to contribute to projects and continue my learning journey in this dynamic field.
+            A JavaScript/React.js Developer passionate about web development. I
+            have been self-teaching for the past three years and recently earned
+            a certificate in JavaScript/React.js from OpenClassRooms to further
+            enhance my skills. I am excited to contribute to projects and
+            continue my learning journey in this dynamic field.
           </p>
           <div className="contact">
             <div className="contact-links">
@@ -108,10 +122,21 @@ const Home = () => {
         </div>
 
         <div className="profile">
-          <div className="right">
-            <img src="/profile-pic1.png" alt="profile-pic" />
-          </div>
+      <div className="right">
+      <div className="thought-cloud">
+          <p>hey! 👋. Hover my picture please </p>
         </div>
+        <img
+          src="/edited-pic.png"
+          alt="profile-pic"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          className="profile-pic"
+        />
+       
+      </div>
+      {isIntroVisible && <Intro />}
+    </div>
       </div>
       <div
         className={`skills ${isSkillsVisible ? "visible" : ""}`}
@@ -168,7 +193,7 @@ const Home = () => {
         </div>
       </div>
       <div className="projects">
-        <h2>Side Projects</h2>
+        <h2>Side Projects </h2>
 
         <div className="sidepro">
           <div className="proj">
@@ -179,12 +204,22 @@ const Home = () => {
             <p>
               To try the applications, you can use the following credentials:
             </p>
+
             <div className="sign">
               <span>e-mail: admin@gmail.com</span>
               <span>password: 123456</span>
+
+              <p>
+                "Sometimes, you need to wait a few seconds to log in, it depends
+                on the network."
+              </p>
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="jsOnly">
+        <JavaScriptOnly />
       </div>
       <div className="contact">
         <section id="contact">

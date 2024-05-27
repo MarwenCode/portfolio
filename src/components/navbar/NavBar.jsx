@@ -48,14 +48,23 @@ const NavBar = () => {
               <a href="#contact">Contact</a>
             </li>
           </Link>
+        
 
         </ul>
+
+       
+  
 
         
      
 
       
       </div>
+
+      {/* <div className="image">
+        <img  src="/edited-pic.png" />
+        </div> */}
+
     </nav>
   );
 };

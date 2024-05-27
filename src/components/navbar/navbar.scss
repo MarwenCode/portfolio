@@ -13,19 +13,19 @@
   font-weight: 500;
 
 
-  .navbar-logo a {
-    font-size: 24px;
-    text-decoration: none;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  // .navbar-logo a {
+  //   font-size: 24px;
+  //   text-decoration: none;
+  //   color: #333;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
     
-    img {
-      width:  100px;
+  //   img {
+  //     width:  100px;
    
-    }
-  }
+  //   }
+  // }
 
   .navbar-menu {
     display: flex;
@@ -66,6 +66,11 @@
         a:hover:after {
           width: 100%;
         }
+
+
+        img {
+          width: 150px;
+        }
       }
     }
 
@@ -97,6 +102,18 @@
     
     
   }
+
+  // .image {
+  //  img {
+  //   width: 70px;
+  //   border-radius: 30px;
+  //  }
+  // }
+
+
+
+
+
   @media (max-width: 300px) {
     .navbar {
       flex-wrap: wrap;
