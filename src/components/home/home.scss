@@ -73,7 +73,7 @@
 
         .thought-cloud {
           position: absolute;
-          
+
           margin-top: -70px;
           margin-right: 10px;
           background-color: #fff;
@@ -84,7 +84,7 @@
           border: 1px solid #ccc;
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        
+
         .thought-cloud::before {
           content: "";
           position: absolute;
@@ -94,12 +94,12 @@
           border-radius: 50% 50% 50% 0;
           bottom: -20px;
           left: 50%;
-        
+
           border: 1px solid #ccc;
         }
-        
-    
-        
+
+
+
         .profile-pic {
           width: 170px;
           border-radius: 50%;
@@ -107,7 +107,7 @@
           cursor: pointer;
           transition: transform 0.3s ease;
         }
-        
+
         .profile-pic:hover {
           transform: scale(1.1);
         }
@@ -249,8 +249,7 @@
     }
   }
 
-  .skills {
-  }
+  .skills {}
 
   .skills.visible {
     opacity: 1;
@@ -271,6 +270,15 @@
 
     // margin-left: 150px;
     position: relative;
+    width: 100%;
+
+
+    place-items: center;
+
+
+
+
+
 
     h2 {
       // margin-left: 710px;
@@ -281,10 +289,29 @@
     }
 
     .sidepro {
-      position: absolute;
+    
+      justify-content: center;
+      align-items: center;
+   
+
+
+
+      place-items: center;
+      padding: 2em;
+ 
+
+
 
       .proj {
         margin-bottom: -150px;
+     
+        width: 100%;
+        border-radius: 20px;
+        cursor: pointer;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
       }
 
       .demo {
@@ -474,6 +501,9 @@
     text-align: center;
     position: relative;
 
+
+
+
     h2 {
       margin-top: 30px;
       margin-bottom: 20px;
@@ -515,8 +545,7 @@
     }
   }
 
-  .jsOnly {
-  }
+  .jsOnly {}
 
   .contact {
     section {
