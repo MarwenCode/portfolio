@@ -123,14 +123,14 @@ const Home = () => {
 
         <div className="profile">
       <div className="right">
-      <div className="thought-cloud">
+      {/* <div className="thought-cloud">
           <p>hey! 👋. Hover my picture please </p>
-        </div>
+        </div> */}
         <img
           src="/edited-pic.png"
           alt="profile-pic"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
+          // onMouseEnter={handleMouseEnter}
+          // onMouseLeave={handleMouseLeave}
           className="profile-pic"
         />
        
