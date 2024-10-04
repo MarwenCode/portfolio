@@ -1,0 +1,51 @@
+{
+  "about": {
+    "greeting": "Hey there! I'm",
+    "description": "A JavaScript/React.js Developer passionate about web development. I have been self-teaching for the past three years and recently earned a certificate in JavaScript/React.js to further enhance my skills. I am excited to contribute to projects and continue my learning journey in this dynamic field."
+  },
+  "skills": {
+    "title": "Skills",
+    "frontend": "Front-end",
+    "figma": "Figma",
+    "css": "CSS",
+    "scss": "SCSS",
+    "javascript": "JavaScript",
+    "react": "React.JS",
+    "backend": "Back-end",
+    "mongodb": "MongoDB",
+    "mysql": "MySQL",
+    "node": "Node.JS",
+    "other": "Other",
+    "github": "Git & GitHub"
+  },
+  "projects": {
+    "title": "Side Projects",
+    "credentials": "To try the applications, you can use the following credentials:",
+    "email": "email",
+    "password": "password",
+    "note": "Sometimes, you need to wait a few seconds to log in, it depends on the network.",
+    "socialMedia": {
+      "title": "Social-Media",
+      "description": "I developed a RESTful API for managing posts, incorporating features such as image uploads, comment editing, and deletion. I proficiently navigated the React ecosystem, employing techniques like the spread operator, conditional rendering, and state management with Redux Toolkit."
+    },
+    "notesChatApp": {
+      "title": "Notes-Chat-app (in progress)",
+      "description": "The Notes application allows users to create notes with advanced features such as saving notes in a MySQL database, editing and deleting notes, as well as assigning each note to a category."
+    },
+    "eCommerceApp": {
+      "title": "E-Commerce-app",
+      "description": "I designed this e-commerce website to enhance my skills in React JS Hooks, particularly useContext and useReducer, which facilitated efficient management of the shopping cart."
+    },
+    "dashboardApp": {
+      "title": "Dashboard-app",
+      "description": "I developed this dashboard using Express JS, MongoDB, and React JS to better master database management and display data using the Context API."
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Submit"
+  }
+}

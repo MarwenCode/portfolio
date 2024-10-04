@@ -1,0 +1,53 @@
+{
+    "about": {
+      "greeting": "Salut ! Je suis",
+      "description": "Je suis développeur JavaScript/React.js passionné par le développement web, prêt à transformer des idées en solutions fonctionnelles. J'ai acquis des compétences solides à travers des projets personnels et une formation ciblée, ce qui me permet d’apporter une approche dynamique et créative à chaque tâche. Je suis enthousiaste à l'idée de collaborer sur des projets passionnants. Let's Connect !"
+    },
+    "skills": {
+      "title": "Compétences",
+      "frontend": "Front-end",
+      "figma": "Figma",
+      "css": "CSS",
+      "scss": "SCSS",
+      "javascript": "JavaScript",
+      "react": "React.JS",
+      "backend": "Back-end",
+      "mongodb": "MongoDB",
+      "mysql": "MySQL",
+      "node": "Node.JS",
+      "other": "Autre",
+      "github": "Git & GitHub"
+    },
+    "projects": {
+      "title": "Side projects",
+      "credentials": "Pour essayer les applications, vous pouvez utiliser les identifiants suivants :",
+      "email": "e-mail",
+      "password": "mot de passe",
+      "note": "Parfois, vous devez attendre quelques secondes pour vous connecter, cela dépend du réseau.",
+      "socialMedia": {
+        "title": "Social-Media",
+        "description": "J'ai développé une API RESTful pour gérer les publications, en intégrant des fonctionnalités telles que le téléchargement d'images, l'édition et la suppression de commentaires.En utilisant des techniques comme le spread operator, le rendu conditionnel et la gestion d'état avec Redux Toolkit."
+      },
+      "notesChatApp": {
+        "title": "Notes-Chat-app (en cours)",
+        "description": "L'application Notes permet aux utilisateurs de créer des notes avec des fonctionnalités avancées telles que l'enregistrement de notes dans une base de données MySQL, l'édition et la suppression de notes, ainsi que l'attribution de chaque note à une catégorie. Cette application est construite avec React JS, MySQL et Express JS."
+      },
+      "eCommerceApp": {
+        "title": "E-Commerce-app",
+        "description": "J'ai conçu ce site e-commerce pour améliorer mes compétences en React JS Hooks, notamment useContext et useReducer, qui facilitent la gestion efficace du panier d'achat."
+      },
+      "dashboardApp": {
+        "title": "Dashboard-app",
+        "description": "J'ai développé ce tableau de bord en utilisant Express JS, MongoDB et React JS pour mieux maîtriser la gestion de base de données et afficher des données à l'aide de l'API Context."
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "name": "Nom",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Soumettre"
+    }
+  }
+  
+  

@@ -111,7 +111,17 @@
   // }
 
 
-
+  .language-switcher {
+    display: flex;
+    align-items: center;
+  }
+  .language-switcher img {
+    cursor: pointer;
+    margin-left: 10px;
+    width: 30px;
+  }
+  
+  
 
 
   @media (max-width: 300px) {

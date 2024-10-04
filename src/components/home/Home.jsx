@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-
+import { useTranslation } from 'react-i18next'; // Import useTranslation
 import { FaLinkedin, FaTwitter, FaEnvelope, FaGithub } from "react-icons/fa";
-
 import "./home.scss";
 import Projects from "../projects/Projects";
 import emailjs from "emailjs-com";
@@ -11,6 +10,7 @@ import JavaScriptOnly from "../javaScriptOnly/JavaScriptOnly";
 import Intro from "../intro/Intro";
 
 const Home = () => {
+  const { t } = useTranslation();
   const [isSkillsVisible, setIsSkillsVisible] = useState(false);
   const [isIntroVisible, setIsIntroVisible] = useState(false);
 
@@ -50,9 +50,7 @@ const Home = () => {
     e.preventDefault();
 
     try {
-      console.log("Form data submitted:", formData);
-
-      const form = e.target; // Get the form element
+      const form = e.target;
 
       const result = await emailjs.sendForm(
         "service_v0gmsdf",
@@ -61,9 +59,6 @@ const Home = () => {
         "tGn9UVohsbbE7IH5z"
       );
 
-      console.log(result.text);
-      // Add any success handling or redirect here
-      // Show a success notification to the user
       toast.success("Your message has been sent!");
       setFormData({
         name: "",
@@ -71,14 +66,10 @@ const Home = () => {
         message: "",
       });
     } catch (error) {
-      console.error(error); // Log the entire error object for further investigation
-      console.log(error?.text || "An error occurred");
-      // Show an error notification to the user
+      console.error(error);
       toast.error("An error occurred. Please try again.");
     }
   };
-
- 
 
   const handleMouseEnter = () => {
     setIsIntroVisible(true);
@@ -92,16 +83,12 @@ const Home = () => {
     <div className="home">
       <div className="about">
         <div className="presentation">
-          <span> Hey there! I'm</span>
+          <span>{t('about.greeting')}</span> 
           <p className="text">
             <span className="name">Marwen Jdidi</span>
           </p>
           <p className="text2">
-            A JavaScript/React.js Developer passionate about web development. I
-            have been self-teaching for the past three years and recently earned
-            a certificate in JavaScript/React.js from OpenClassRooms to further
-            enhance my skills. I am excited to contribute to projects and
-            continue my learning journey in this dynamic field.
+            {t('about.description')} 
           </p>
           <div className="contact">
             <div className="contact-links">
@@ -122,97 +109,84 @@ const Home = () => {
         </div>
 
         <div className="profile">
-      <div className="right">
-      {/* <div className="thought-cloud">
-          <p>hey! 👋. Hover my picture please </p>
-        </div> */}
-        <img
-          src="/edited-pic.png"
-          alt="profile-pic"
-          // onMouseEnter={handleMouseEnter}
-          // onMouseLeave={handleMouseLeave}
-          className="profile-pic"
-        />
-       
+          <div className="right">
+            <img
+              src="/profile image.jpg"
+              alt="profile-pic"
+              className="profile-pic"
+            />
+          </div>
+          {isIntroVisible && <Intro />}
+        </div>
       </div>
-      {isIntroVisible && <Intro />}
-    </div>
-      </div>
-      <div
-        className={`skills ${isSkillsVisible ? "visible" : ""}`}
-        id="skills-section">
-        <h2>Skills</h2>
 
-        <div class="skills-container">
-          <div class="section frontend">
-            <h2>Front-end</h2>
-            <div class="skill">
+      <div className={`skills ${isSkillsVisible ? "visible" : ""}`} id="skills-section">
+        <h2>{t('skills.title')}</h2>  
+
+        <div className="skills-container">
+          <div className="section frontend">
+            <h2>{t('skills.frontend')}</h2> 
+            <div className="skill">
               <img src="/figma3.png" alt="Figma icon" />
-              <p>Figma</p>
+              <p>{t('skills.figma')}</p> 
             </div>
-            <div class="skill">
+            <div className="skill">
               <img src="/css.png" alt="" />
-              <p>CSS</p>
+              <p>{t('skills.css')}</p> 
             </div>
-            <div class="skill">
+            <div className="skill">
               <img src="/sass.svg" alt="" />
-              <p>SCSS</p>
+              <p>{t('skills.scss')}</p> 
             </div>
-            <div class="skill">
+            <div className="skill">
               <img src="/javascript.svg" alt="" />
-              <p>JavaScript</p>
+              <p>{t('skills.javascript')}</p> 
             </div>
-            <div class="skill">
+            <div className="skill">
               <img src="/react.png" alt="" />
-              <p>React.JS</p>
-            </div>
-          </div>
-          <div class="section backend">
-            <h2>Back-end</h2>
-            <div class="skill">
-              <img src="/mongo.png" alt="" />
-              <p>MongoDB</p>
-            </div>
-            <div class="skill">
-              <img src="/mysql.svg" alt="" />
-              <p>MySQL</p>
-            </div>
-            <div class="skill">
-              <img src="/node.png" alt="" />
-              <p>Node.JS</p>
+              <p>{t('skills.react')}</p> 
             </div>
           </div>
 
-          <div class="section other">
-            <h2>Other</h2>
-            <div class="skill">
+          <div className="section backend">
+            <h2>{t('skills.backend')}</h2>
+            <div className="skill">
+              <img src="/mongo.png" alt="" />
+              <p>{t('skills.mongodb')}</p>
+            </div>
+            <div className="skill">
+              <img src="/mysql.svg" alt="" />
+              <p>{t('skills.mysql')}</p> 
+            </div>
+            <div className="skill">
+              <img src="/node.png" alt="" />
+              <p>{t('skills.node')}</p> 
+            </div>
+          </div>
+
+          <div className="section other">
+            <h2>{t('skills.other')}</h2> 
+            <div className="skill">
               <img src="/github.png" alt="Git & GitHub icon" />
-              <p>Git & GitHub</p>
+              <p>{t('skills.github')}</p> 
             </div>
           </div>
         </div>
       </div>
-      <div className="projects">
-        <h2>Side Projects </h2>
 
+      <div className="projects">
+        <h2>{t('projects.title')}</h2> 
         <div className="sidepro">
           <div className="proj">
             <Projects />
           </div>
 
           <div className="demo">
-            <p>
-              To try the applications, you can use the following credentials:
-            </p>
-
+            <p>{t('projects.credentials')}</p> 
             <div className="sign">
-              <span>e-mail: admin@gmail.com</span>
-              <span>password: 123456</span>
-
-              <p>
-                "Sometimes, you need to wait a few seconds to log in, it depends
-                on the network."
-              </p>
+              <span>{t('projects.email')}: admin@gmail.com</span> 
+              <span>{t('projects.password')}: 123456</span> 
+              <p>{t('projects.note')}</p>
             </div>
           </div>
         </div>
@@ -221,12 +195,13 @@ const Home = () => {
       <div className="jsOnly">
         <JavaScriptOnly />
       </div>
+
       <div className="contact">
         <section id="contact">
-          <h2>Contact</h2>
+          <h2>{t('contact.title')}</h2> 
           <form onSubmit={handleSubmit}>
             <div className="form-group">
-              <label htmlFor="name">Name:</label>
+              <label htmlFor="name">{t('contact.name')}:</label>
               <input
                 type="text"
                 id="name"
@@ -237,7 +212,7 @@ const Home = () => {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="email">Email:</label>
+              <label htmlFor="email">{t('contact.email')}:</label> 
               <input
                 type="email"
                 id="email"
@@ -248,15 +223,16 @@ const Home = () => {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="message">Message:</label>
+              <label htmlFor="message">{t('contact.message')}:</label> 
               <textarea
                 id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                required></textarea>
+                required
+              ></textarea>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit">{t('contact.submit')}</button> 
           </form>
           <ToastContainer />
           <div className="contact-links">
