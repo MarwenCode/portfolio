@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
-import Flag from 'react-world-flags';  // Import the Flag component
+import Flag from 'react-world-flags';
 import { GrDownload } from "react-icons/gr";
-import { useTranslation } from 'react-i18next';  // Import useTranslation from i18next
+import { useTranslation } from 'react-i18next';
 import "./navbar.scss";
 
 const NavBar = () => {
-  const { i18n } = useTranslation();  // Destructure the i18n object from useTranslation
+  const { i18n } = useTranslation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleDownload = () => {
     const link = document.createElement("a");
@@ -15,9 +16,12 @@ const NavBar = () => {
     link.click();
   };
 
-  // Function to switch language
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
@@ -30,7 +34,25 @@ const NavBar = () => {
           </abbr>
         </div>
 
-        <ul>
+        <div className="burger-menu" onClick={toggleMenu}>
+          ☰
+        </div>
+
+        {isMenuOpen && (
+          <ul className="mobile-menu">
+            <Link to="skills" smooth={true} duration={500}>
+              <li><a href="#skills">Skills</a></li>
+            </Link>
+            <Link to="projects" smooth={true} duration={500}>
+              <li><a href="#projects">Projects</a></li>
+            </Link>
+            <Link to="contact" smooth={true} duration={500}>
+              <li><a href="#contact">Contact</a></li>
+            </Link>
+          </ul>
+        )}
+
+        <ul className="desktop-menu">
           <Link to="skills" smooth={true} duration={500}>
             <li><a href="#skills">Skills</a></li>
           </Link>
@@ -43,17 +65,16 @@ const NavBar = () => {
         </ul>
       </div>
 
-      {/* Add the language switcher with flags */}
       <div className="language-switcher">
-        <Flag 
-          code="FR" 
-          style={{ width: "30px", cursor: "pointer" }} 
-          onClick={() => changeLanguage('fr')}  // Change to French
+        <Flag
+          code="FR"
+          style={{ width: "30px", cursor: "pointer" }}
+          onClick={() => changeLanguage('fr')}
         />
-        <Flag 
-          code="GB" 
-          style={{ width: "30px", marginLeft: "10px", cursor: "pointer" }} 
-          onClick={() => changeLanguage('en')}  // Change to English
+        <Flag
+          code="GB"
+          style={{ width: "30px", marginLeft: "10px", cursor: "pointer" }}
+          onClick={() => changeLanguage('en')}
         />
       </div>
     </nav>
@@ -61,6 +82,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-
-
