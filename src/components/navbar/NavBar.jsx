@@ -11,8 +11,8 @@ const NavBar = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Marwen-Jdidi-CV-DEV.pdf";
-    link.download = "Marwen-Jdidi-CV-DEV.pdf";
+    link.href = "/Marwen-Jdidi-CV_DEV.pdf";
+    link.download = "Marwen-Jdidi-CV_DEV.pdf";
     link.click();
   };
 
