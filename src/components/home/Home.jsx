@@ -95,9 +95,9 @@ const Home = () => {
               <a href="https://www.linkedin.com/in/marwen-dev-react-js">
                 <FaLinkedin size={32} />
               </a>
-              <a href="https://twitter.com/MarwenCode">
+              {/* <a href="https://twitter.com/MarwenCode">
                 <FaTwitter size={32} />
-              </a>
+              </a> */}
               <a href="mailto:marwen.jdidi75@gmail.com">
                 <FaEnvelope size={32} />
               </a>
@@ -239,9 +239,9 @@ const Home = () => {
             <a href="https://www.linkedin.com/in/marwen-dev-react-js">
               <FaLinkedin size={32} />
             </a>
-            <a href="https://twitter.com/MarwenCode">
+            {/* <a href="https://twitter.com/MarwenCode">
               <FaTwitter size={32} />
-            </a>
+            </a> */}
             <a href="mailto:marwen.jdidi75@gmail.com">
               <FaEnvelope size={32} />
             </a>
