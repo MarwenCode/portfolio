@@ -27,12 +27,12 @@ const NavBar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-menu">
-        {/* <div className="cv" onClick={handleDownload}>
+        <div className="cv" onClick={handleDownload}>
           <span>Download CV</span>
           <abbr title="clic here to download CV">
             <GrDownload style={{ fontSize: "20px" }} className="icon" />
           </abbr>
-        </div> */}
+        </div>
 
         <div className="burger-menu" onClick={toggleMenu}>
           ☰
