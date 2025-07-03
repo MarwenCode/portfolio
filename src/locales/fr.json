@@ -1,7 +1,7 @@
 {
     "about": {
       "greeting": "Salut ! Je suis",
-      "description": "Je suis développeur JavaScript/React.js passionné par le développement web, prêt à transformer des idées en solutions fonctionnelles. J'ai acquis des compétences solides à travers des projets personnels et une formation ciblée, ce qui me permet d’apporter une approche dynamique et créative à chaque tâche. Je suis enthousiaste à l'idée de collaborer sur des projets passionnants. Let's Connect !"
+      "description": "Je suis développeur JavaScript/React.js passionné par le développement web, prêt à transformer des idées en solutions fonctionnelles. J'ai acquis des compétences solides à travers des projets personnels et une formation ciblée, ce qui me permet d'apporter une approche dynamique et créative à chaque tâche. Je suis enthousiaste à l'idée de collaborer sur des projets passionnants. Let's Connect !"
     },
     "skills": {
       "title": "Compétences",
@@ -39,6 +39,10 @@
       "dashboardApp": {
         "title": "Dashboard-app",
         "description": "J'ai développé ce tableau de bord en utilisant Express JS, MongoDB et React JS pour mieux maîtriser la gestion de base de données et afficher des données à l'aide de l'API Context."
+      },
+      "stepsApp": {
+        "title": "Steps App",
+        "description": "Une application web pour suivre vos pas quotidiens et surveiller vos progrès au fil du temps. Développée avec des technologies web modernes."
       }
     },
     "contact": {

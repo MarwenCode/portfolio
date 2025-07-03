@@ -31,11 +31,11 @@ const Project = ({ video }) => {
       animate={controls}
       transition={{ duration: 1 }}
     >
-      <div className="hover">
-        <span>{video.description}</span>
-      </div>
-      <div className="top">
+      <div className="top" style={{position: 'relative'}}>
         <span>{video.title}</span>
+        <div className="hover">
+          <span>{video.description}</span>
+        </div>
         <img src={video.image} alt={video.title} />
       </div>
       <div className="links">

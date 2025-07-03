@@ -39,6 +39,10 @@
     "dashboardApp": {
       "title": "Dashboard-app",
       "description": "I developed this dashboard using Express JS, MongoDB, and React JS to better master database management and display data using the Context API."
+    },
+    "stepsApp": {
+      "title": "Steps App",
+      "description": "A web application to track your daily steps and monitor your progress over time. Built with modern web technologies."
     }
   },
   "contact": {
