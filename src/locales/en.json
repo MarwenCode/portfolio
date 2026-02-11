@@ -1,7 +1,7 @@
 {
   "about": {
     "greeting": "Hey there! I'm",
-    "description": "A JavaScript/React.js Developer passionate about web development. I have been self-teaching for the past three years and recently earned a certificate in JavaScript/React.js to further enhance my skills. I am excited to contribute to projects. Let's Connect !."
+    "description": "A developer passionate about the JavaScript ecosystem, with 2 years of web development experience (React, Node.js, Java) and 3 previous years as a Functional Consultant. This dual background allows me to design strong technical solutions while ensuring perfect alignment with business needs and client specifications. Let's Connect!"
   },
   "skills": {
     "title": "Skills",
@@ -12,11 +12,17 @@
     "javascript": "JavaScript",
     "react": "React.JS",
     "backend": "Back-end",
+    "database": "Database",
+    "tools": "Tools",
     "mongodb": "MongoDB",
     "mysql": "MySQL",
+    "postgresql": "PostgreSQL",
     "node": "Node.JS",
+    "java": "Java",
     "other": "Other",
-    "github": "Git & GitHub"
+    "github": "Git & GitHub",
+    "postman": "Postman",
+    "swagger": "Swagger"
   },
   "projects": {
     "title": "Side Projects",

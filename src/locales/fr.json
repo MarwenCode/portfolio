@@ -1,7 +1,7 @@
 {
   "about": {
     "greeting": "Salut ! Je suis",
-    "description": "Je suis developpeur JavaScript/React.js passionne par le developpement web, pret a transformer des idees en solutions fonctionnelles. J'ai acquis des competences solides a travers des projets personnels et une formation ciblee, ce qui me permet d'apporter une approche dynamique et creative a chaque tache. Je suis enthousiaste a l'idee de collaborer sur des projets passionnants. Let's Connect !"
+    "description": "Developpeur passionné par l'ecosysteme JavaScript avec 2 ans d'experience en developpement web (React, Node.js, Java) et 3 ans d'experience prealable en tant que Consultant Fonctionnel. Cette double culture me permet de concevoir des solutions techniques performantes tout en garantissant un alignement parfait avec les besoins metiers et les specifications clients. Let's Connect !"
   },
   "skills": {
     "title": "Competences",
@@ -12,11 +12,17 @@
     "javascript": "JavaScript",
     "react": "React.JS",
     "backend": "Back-end",
+    "database": "Base de données",
+    "tools": "Outils",
     "mongodb": "MongoDB",
     "mysql": "MySQL",
+    "postgresql": "PostgreSQL",
     "node": "Node.JS",
+    "java": "Java",
     "other": "Autre",
-    "github": "Git & GitHub"
+    "github": "Git & GitHub",
+    "postman": "Postman",
+    "swagger": "Swagger"
   },
   "projects": {
     "title": "Side projects",

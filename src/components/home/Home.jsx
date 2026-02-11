@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next'; // Import useTranslation
 import { FaLinkedin, FaEnvelope, FaGithub } from "react-icons/fa";
+import { SiPostman, SiSwagger, SiPostgresql, SiJava } from "react-icons/si";
 import "./home.scss";
 import Projects from "../projects/Projects";
 import emailjs from "emailjs-com";
@@ -140,6 +141,18 @@ const Home = () => {
           <div className="section backend">
             <h2>{t('skills.backend')}</h2>
             <div className="skill">
+              <img src="/node.png" alt="" />
+              <p>{t('skills.node')}</p> 
+            </div>
+            <div className="skill">
+              <SiJava className="skill-icon" />
+              <p>{t('skills.java')}</p>
+            </div>
+          </div>
+
+          <div className="section database">
+            <h2>{t('skills.database')}</h2>
+            <div className="skill">
               <img src="/mongo.png" alt="" />
               <p>{t('skills.mongodb')}</p>
             </div>
@@ -148,16 +161,24 @@ const Home = () => {
               <p>{t('skills.mysql')}</p> 
             </div>
             <div className="skill">
-              <img src="/node.png" alt="" />
-              <p>{t('skills.node')}</p> 
+              <SiPostgresql className="skill-icon" />
+              <p>{t('skills.postgresql')}</p>
             </div>
           </div>
 
           <div className="section other">
-            <h2>{t('skills.other')}</h2> 
+            <h2>{t('skills.tools')}</h2> 
             <div className="skill">
               <img src="/github.png" alt="Git & GitHub icon" />
               <p>{t('skills.github')}</p> 
+            </div>
+            <div className="skill">
+              <SiPostman className="skill-icon" />
+              <p>{t('skills.postman')}</p>
+            </div>
+            <div className="skill">
+              <SiSwagger className="skill-icon" />
+              <p>{t('skills.swagger')}</p>
             </div>
           </div>
         </div>
