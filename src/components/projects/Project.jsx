@@ -3,7 +3,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import "./projects.scss";
 
-const Project = ({ video }) => {
+const Project = ({ video, className = "" }) => {
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [showPlayer, setShowPlayer] = useState(false);
   const controls = useAnimation();
@@ -25,7 +25,7 @@ const Project = ({ video }) => {
 
   return (
     <motion.div
-      className="project"
+      className={`project ${className}`.trim()}
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={controls}
@@ -39,13 +39,19 @@ const Project = ({ video }) => {
         <img src={video.image} alt={video.title} />
       </div>
       <div className="links">
-        <span>{video.code && <a href={video.code}>Code</a>}</span>
-        <span>{video.app && <a href={video.app}>App</a>}</span>
-        <span>
-          {video.src && (
-            <a className="video" onClick={() => handleClick(video.src)}>
+        <span className={video.code ? "" : "is-disabled"}>
+          {video.code ? <a href={video.code}>Code</a> : "Code (Soon)"}
+        </span>
+        <span className={video.app ? "" : "is-disabled"}>
+          {video.app ? <a href={video.app}>App</a> : "App (Soon)"}
+        </span>
+        <span className={video.src ? "" : "is-disabled"}>
+          {video.src ? (
+            <button className="video" type="button" onClick={() => handleClick(video.src)}>
               Demo
-            </a>
+            </button>
+          ) : (
+            "Demo (Soon)"
           )}
         </span>
       </div>

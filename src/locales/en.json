@@ -24,6 +24,10 @@
     "email": "email",
     "password": "password",
     "note": "Sometimes, you need to wait a few seconds to log in, it depends on the network.",
+    "openTaskHub": {
+      "title": "OpenTaskHub",
+      "description": "Project and ticket management platform with authentication, workspace dashboards, and collaborative task tracking."
+    },
     "socialMedia": {
       "title": "Social-Media",
       "description": "I developed a RESTful API for managing posts, incorporating features such as image uploads, comment editing, and deletion. I proficiently navigated the React ecosystem, employing techniques like the spread operator, conditional rendering, and state management with Redux Toolkit."

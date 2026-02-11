@@ -1,22 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next'; // Import useTranslation
-import { FaLinkedin, FaTwitter, FaEnvelope, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaEnvelope, FaGithub } from "react-icons/fa";
 import "./home.scss";
 import Projects from "../projects/Projects";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import JavaScriptOnly from "../javaScriptOnly/JavaScriptOnly";
-import Intro from "../intro/Intro";
 
 const Home = () => {
   const { t } = useTranslation();
   const [isSkillsVisible, setIsSkillsVisible] = useState(false);
-  const [isIntroVisible, setIsIntroVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const skillsSection = document.getElementById("skills-section");
+      const skillsSection = document.getElementById("skills");
       if (skillsSection) {
         const rect = skillsSection.getBoundingClientRect();
         const isVisible =
@@ -52,7 +50,7 @@ const Home = () => {
     try {
       const form = e.target;
 
-      const result = await emailjs.sendForm(
+      await emailjs.sendForm(
         "service_v0gmsdf",
         "template_g73cyy8",
         form,
@@ -71,14 +69,6 @@ const Home = () => {
     }
   };
 
-  const handleMouseEnter = () => {
-    setIsIntroVisible(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsIntroVisible(false);
-  };
-
   return (
     <div className="home">
       <div className="about">
@@ -90,7 +80,7 @@ const Home = () => {
           <p className="text2">
             {t('about.description')} 
           </p>
-          <div className="contact">
+          <div className="hero-contact">
             <div className="contact-links">
               <a href="https://www.linkedin.com/in/marwen-dev-react-js">
                 <FaLinkedin size={32} />
@@ -116,11 +106,10 @@ const Home = () => {
               className="profile-pic"
             />
           </div>
-          {isIntroVisible && <Intro />}
         </div>
       </div>
 
-      <div className={`skills ${isSkillsVisible ? "visible" : ""}`} id="skills-section">
+      <div className={`skills ${isSkillsVisible ? "visible" : ""}`} id="skills">
         <h2>{t('skills.title')}</h2>  
 
         <div className="skills-container">
@@ -174,7 +163,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="projects">
+      <div className="projects" id="projects">
         <h2>{t('projects.title')}</h2> 
         <div className="sidepro">
           <div className="proj">

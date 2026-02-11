@@ -1,173 +1,169 @@
 .home {
-  margin-top: 60px;
-  justify-content: center;
-  padding: 1rem;
+  width: 100%;
+  max-width: 980px;
+  margin: 1.3rem auto 3rem;
+  padding: 0;  
+  display: grid;
+  gap: 2.8rem;
+  box-sizing: border-box;
 
   .about {
-    margin-top: 60px;
-    justify-content: center;
     display: flex;
-    padding: 2rem;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.35rem;
+    border: 1px solid var(--card-border);
+    border-radius: 22px;
+    background: linear-gradient(145deg, rgba(18, 28, 55, 0.9), rgba(12, 20, 43, 0.72));
+    box-shadow: var(--shadow-lg);
+    width: min(100%, 1200px);
+    max-width: 900px;
+    box-sizing: border-box;
+    margin: 0 auto;  
 
     .presentation {
-      flex-direction: column;
+      flex: 1 1 520px;
+      max-width: 560px;
+      min-width: 0;
 
       span {
-        font-size: larger;
-        color: aqua;
+        display: inline-block;
+        margin-bottom: 0.7rem;
+        color: var(--accent);
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        font-size: 0.9rem;
       }
 
       .text {
-        animation: fadeIn 10s ease-in;
-        border-radius: 20px;
-        width: 100%;
-        padding: 20px;
-        font-size: larger;
-
         .name {
-          color: aqua;
-          font-size: 6rem;
-          line-height: 1.1;
-          margin-left: -25px;
+          font-size: clamp(1.75rem, 4.2vw, 3.3rem);
+          line-height: 1;
+          font-weight: 800;
+          color: var(--text);
+          text-wrap: balance;
         }
       }
 
       .text2 {
-        text-align: start;
-        text-decoration: solid;
-        font-size: 1.5rem;
-        width: 70%;
+        margin-top: 0.9rem;
+        font-size: clamp(0.94rem, 1.15vw, 1.02rem);
+        max-width: 38ch;
+        overflow-wrap: anywhere;
+        color: var(--text-dim);
       }
 
-      .contact {
-        margin-top: 20px;
-        margin-right: 81%;
+      .hero-contact {
+        margin-top: 1.4rem;
       }
+    }
 
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
+    .contact-links {
+      display: flex;
+      gap: 0.7rem;
 
-        to {
-          opacity: 1;
+      a {
+        width: 42px;
+        height: 42px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        border: 1px solid var(--card-border);
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--text);
+        transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+
+        &:hover {
+          transform: translateY(-2px);
+          border-color: rgba(35, 212, 197, 0.6);
+          background: rgba(35, 212, 197, 0.12);
         }
       }
     }
 
     .profile {
+      flex: 0 0 220px;
+      display: flex;
+      justify-content: center;
+
       .right {
+        position: relative;
+
         .profile-pic {
-          width: 170px;
-          border-radius: 10%;
-          box-shadow: 0px 2px 5px #ccc;
-          cursor: pointer;
-          transition: transform 0.3s ease;
-        }
+          width: clamp(170px, 22vw, 250px);
+          aspect-ratio: 4 / 5;
+          object-fit: cover;
+          object-position: 50% 18%;
+          border-radius: 26px;
+          border: 1px solid var(--card-border);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+          transform: rotate(-2deg);
+          transition: transform 0.25s ease;
+          display: block;
 
-        img {
-          width: 170px;
-          border-radius: 50%;
-          box-shadow: 0px 2px 5px #ccc;
-          cursor: pointer;
-        }
-
-        .hover-text {
-          margin-top: 10px;
-          font-size: 16px;
-          color: #333;
-          animation: fadeIn 2s infinite alternate;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        @keyframes fadeIn {
-          from {
-            opacity: 0.5;
-          }
-
-          to {
-            opacity: 1;
+          &:hover {
+            transform: rotate(0deg) translateY(-2px);
           }
         }
-
-        @keyframes bounce {
-          from {
-            transform: translateY(0);
-          }
-
-          to {
-            transform: translateY(-5px);
-          }
-        }
-      }
-
-      .left {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        width: 100%;
-        border-radius: 20px;
-        box-shadow: 0px 2px 5px #ccc;
-        padding-left: 50px;
-        padding-top: 20px;
-      }
-
-      .left:hover {
-        border-radius: 10%;
-        box-shadow: 0px 2px 5px rgb(148, 144, 144);
       }
     }
   }
 
   .skills {
-    padding: 2em;
-    text-align: center;
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-in-out, transform 2s ease-in-out;
+    transform: translateY(30px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+    width: calc(100% - 2.4rem);  
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;  
 
-    h2 {
-      font-size: 2em;
-      margin-bottom: 1em;
-      margin-right: 50px;
+    > h2 {
+      font-size: clamp(1.45rem, 2.5vw, 1.95rem);
+      margin-bottom: 1.2rem;
     }
 
     .skills-container {
-      display: flex;
-      justify-content: center;
-      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
+      width: 100%;
 
       .section {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        padding: 1rem;
+        padding: 0.95rem;
+        border-radius: 14px;
+        border: 1px solid var(--card-border);
+        background: var(--card);
+        box-sizing: border-box;
+        min-width: 0;
 
         h2 {
-          margin-bottom: 1rem;
-          width: 100%;
+          font-size: 1rem;
+          margin-bottom: 0.65rem;
         }
 
         .skill {
           display: flex;
           align-items: center;
-          margin-bottom: 1rem;
-          margin-left: 30%;
-        }
+          gap: 0.6rem;
+          padding: 0.45rem 0;
 
-        img {
-          width: 32px;
-          height: 32px;
-          margin-right: 0.5rem;
-        }
+          img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            flex-shrink: 0;
+          }
 
-        p {
-          text-align: start;
+          p {
+            color: var(--text-dim);
+            overflow-wrap: break-word;
+          }
         }
       }
     }
@@ -179,516 +175,211 @@
   }
 
   .projects {
-    background-color: rgb(237, 236, 243);
-    margin-top: 100px;
-    margin-bottom: 20px;
-    height: 130vh;
-    padding: 2em;
-    text-align: center;
-    position: relative;
-    width: 100%;
-    place-items: center;
+    padding: 1.35rem;
+    border-radius: 22px;
+    border: 1px solid var(--card-border);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+    width: calc(100% - 2.4rem);  
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;  
 
-    h2 {
-      margin-top: 30px;
-      margin-bottom: 50px;
-      cursor: pointer;
-      color: black;
+    > h2 {
+      font-size: clamp(1.45rem, 2.5vw, 1.95rem);
+      margin-bottom: 0.75rem;
     }
 
     .sidepro {
-      justify-content: center;
-      align-items: center;
-      place-items: center;
-      padding: 2em;
+      display: grid;
+      gap: 1.25rem;
+      width: 100%;
+    }
 
-      .proj {
-        margin-bottom: -150px;
-        width: 100%;
-        border-radius: 20px;
-        cursor: pointer;
-        color: white;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-      }
+    .demo {
+      padding: 0.85rem;
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+      background: rgba(13, 20, 43, 0.68);
+      color: var(--text-dim);
+      font-size: 0.95rem;
 
-      .demo {
-        margin-top: 150px;
-        width: 100%;
-        display: block;
-        color: rgb(4, 11, 116);
-        animation: demo 3s ease infinite alternate;
+      .sign {
+        margin-top: 0.5rem;
+        display: grid;
+        gap: 0.25rem;
 
-        .sign span {
-          display: block;
-        }
-      }
-
-      @keyframes demo {
-        from {
-          opacity: 0;
+        span {
+          font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+          color: var(--text);
+          word-break: break-word;
         }
 
-        to {
-          opacity: 1;
+        p {
+          margin-top: 0.3rem;
+          font-style: italic;
+          color: var(--text-dim);
         }
       }
     }
   }
 
   .jsOnly {
-    width: 100%;
+    width: min(100%, 900px);
+    max-width: 900px;
+    box-sizing: border-box;
+    margin: 0 auto;  
   }
 
-  .contact {
-    padding: 2rem;
-    text-align: center;
-    margin-top: 100px;
-    position: relative;
+  > .contact {
+    border: 1px solid var(--card-border);
+    border-radius: 22px;
+    padding: 1.35rem;
+    background: var(--card);
+    width: min(100%, 900px);
+    max-width: 900px;
+    box-sizing: border-box;
+    margin: 0 auto;  
 
-    h2 {
-      margin-bottom: 2rem;
-    }
-
-    .contact-links {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      a {
-        color: rgb(129, 123, 123);
-        margin: 0 1rem;
-        transition: all 0.2s ease-in-out;
-
-        &:hover {
-          color: #f0f2f3;
-        }
-
-        svg {
-          width: 32px;
-          height: 32px;
-        }
+    section {
+      > h2 {
+        font-size: clamp(1.45rem, 2.5vw, 1.95rem);
+        margin-bottom: 0.9rem;
       }
     }
 
     form {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      gap: 0.8rem;
 
       .form-group {
-        margin-bottom: 15px;
-
         label {
-          font-weight: bold;
-          margin-bottom: 8px;
           display: block;
+          margin-bottom: 0.45rem;
+          font-weight: 600;
         }
 
         input,
         textarea {
-          width: 50%;
-          padding: 10px;
-          font-size: 16px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
+          width: 100%;
+          border-radius: 12px;
+          border: 1px solid rgba(148, 163, 184, 0.35);
+          background: rgba(6, 11, 27, 0.7);
+          color: var(--text);
+          padding: 0.8rem 0.85rem;
+          font-size: 0.92rem;
+          box-sizing: border-box;
 
           &:focus {
             outline: none;
-            border-color: #007bff;
+            border-color: var(--accent-2);
+            box-shadow: 0 0 0 2px rgba(79, 124, 255, 0.25);
           }
         }
 
         textarea {
+          min-height: 130px;
           resize: vertical;
-          height: 150px;
         }
       }
 
       button {
-        background-color: rgb(135, 135, 146);
+        width: fit-content;
+        padding: 0.65rem 1.05rem;
+        border-radius: 10px;
+        border: 1px solid rgba(79, 124, 255, 0.7);
+        background: linear-gradient(135deg, var(--accent-2), #2f57d8);
         color: #fff;
-        padding: 10px;
-        font-size: 18px;
-        border: none;
-        border-radius: 4px;
+        font-weight: 700;
         cursor: pointer;
-        width: 15%;
-        justify-content: center;
-        align-items: center;
-        margin-left: 42%;
-        margin-bottom: 50px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
 
         &:hover {
-          background-color: #0a0b3f;
+          transform: translateY(-1px);
+          box-shadow: 0 10px 25px rgba(47, 87, 216, 0.4);
+        }
+      }
+    }
+
+    .contact-links {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.65rem;
+
+      a {
+        width: 42px;
+        height: 42px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        border: 1px solid var(--card-border);
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--text-dim);
+
+        &:hover {
+          color: var(--text);
+          border-color: rgba(35, 212, 197, 0.5);
         }
       }
     }
   }
 }
 
-// Media Queries for Responsiveness
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   .home {
-    padding: 1rem;
-
     .about {
       flex-direction: column;
-      align-items: center;
+      text-align: center;
 
       .presentation {
-        text-align: center;
-
-        .text {
-          font-size: 1.5rem;
-        }
-
         .text2 {
-          font-size: 1.2rem;
-          width: 100%;
-        }
-
-        .contact {
-          margin-right: 0;
+          margin-inline: auto;
         }
       }
 
+      .contact-links {
+        justify-content: center;
+      }
+
       .profile {
-        flex-direction: column;
-        align-items: center;
-
-        .right {
-          .profile-pic {
-            width: 150px;
-          }
-
-          img {
-            width: 150px;
-          }
-        }
-
-        .left {
-          padding-left: 0;
-          padding-top: 1rem;
-        }
+        margin-top: 1rem;
       }
     }
 
     .skills {
       .skills-container {
-        flex-direction: column;
-
-        .section {
-          .skill {
-            margin-left: 0;
-          }
-        }
+        grid-template-columns: 1fr;
       }
     }
+  }
+}
 
-    .projects {
-      height: auto;
+@media (max-width: 680px) {
+  .home {
+    width: 100%;
+    padding: 0;
+    gap: 2rem;
 
-      .sidepro {
-        .proj {
-          margin-bottom: 0;
-        }
+    .about,
+    .skills,
+    .projects,
+    .jsOnly,
+    .contact {
+      width: calc(100% - 1.2rem);  
+      margin: 0 auto;
+    }
 
-        .demo {
-          margin-top: 20px;
-        }
-      }
+    .about,
+    .projects,
+    .contact {
+      padding: 1rem;
+      border-radius: 16px;
     }
 
     .contact {
       form {
-        .form-group {
-          input,
-          textarea {
-            width: 100%;
-          }
-        }
-
         button {
           width: 100%;
-          margin-left: 0;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .home {
-    padding: 1rem;
-
-    .about {
-      flex-direction: column;
-      align-items: center;
-
-      .presentation {
-        text-align: center;
-
-        .text {
-          font-size: 1.5rem;
-        }
-
-        .text2 {
-          font-size: 1.2rem;
-          width: 100%;
-        }
-
-        .contact {
-          margin-right: 0;
-        }
-      }
-
-      .profile {
-        flex-direction: column;
-        align-items: center;
-
-        .right {
-          .profile-pic {
-            width: 150px;
-          }
-
-          img {
-            width: 150px;
-          }
-        }
-
-        .left {
-          padding-left: 0;
-          padding-top: 1rem;
-        }
-      }
-    }
-
-    .skills {
-      .skills-container {
-        flex-direction: column;
-
-        .section {
-          .skill {
-            margin-left: 0;
-          }
-        }
-      }
-    }
-
-    .projects {
-      height: auto;
-
-      .sidepro {
-        .proj {
-          margin-bottom: 0;
-        }
-
-        .demo {
-          margin-top: 20px;
-        }
-      }
-    }
-
-    .contact {
-      form {
-        .form-group {
-          input,
-          textarea {
-            width: 100%;
-          }
-        }
-
-        button {
-          width: 100%;
-          margin-left: 0;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .home {
-    padding: 1rem;
-
-    .about {
-      flex-direction: column;
-      align-items: center;
-      font-size: medium;
-
-      .presentation {
-        text-align: center;
-
-        .text {
-          font-size: 1.5rem;
-        }
-
-        .text2 {
-          font-size: 1.2rem;
-          width: 100%;
-        }
-
-        .contact {
-          margin-right: 0;
-        }
-      }
-
-      .profile {
-        flex-direction: column;
-        align-items: center;
-
-        .right {
-          .profile-pic {
-            width: 150px;
-          }
-
-          img {
-            width: 150px;
-          }
-        }
-
-        .left {
-          padding-left: 0;
-          padding-top: 1rem;
-        }
-      }
-    }
-
-    .skills {
-      .skills-container {
-        flex-direction: column;
-
-        .section {
-          .skill {
-            margin-left: 0;
-          }
-        }
-      }
-    }
-
-    .projects {
-      height: auto;
-
-      .sidepro {
-        .proj {
-          margin-bottom: 0;
-        }
-
-        .demo {
-          margin-top: 20px;
-        }
-      }
-    }
-
-    .contact {
-      form {
-        .form-group {
-          input,
-          textarea {
-            width: 100%;
-          }
-        }
-
-        button {
-          width: 100%;
-          margin-left: 0;
-        }
-      }
-    }
-  }
-}
-
-
-@media (max-width: 425px) {
-  .home {
-    padding: 1rem;
-
-    .about {
-      flex-direction: column;
-      align-items: center;
-      font-size: small;
-
-      .presentation {
-        text-align: center;
-        font-size: small;
-
-        .text {
-          font-size: 1.2rem; 
-          
-          .name {
-            font-size: 1.5rem; 
-          }
-        }
-
-        .text2 {
-          font-size: 1rem; 
-          width: 100%;
-        }
-
-        .contact {
-          margin-right: 0;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 375px) {
-  .home {
-    padding: 1rem;
-
-    .about {
-      flex-direction: column;
-      align-items: center;
-
-      .presentation {
-        text-align: center;
-
-        .text {
-          font-size: 1rem; 
-          
-          .name {
-            font-size: 1.3rem; 
-          }
-        }
-
-        .text2 {
-          font-size: 0.9rem; 
-          width: 100%;
-        }
-
-        .contact {
-          margin-right: 0;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 320px) {
-  .home {
-    padding: 1rem;
-
-    .about {
-      flex-direction: column;
-      align-items: center;
-
-      .presentation {
-        text-align: center;
-
-        .text {
-          font-size: 0.9rem; 
-          .name {
-            font-size: 1.1rem; 
-          }
-        }
-
-        .text2 {
-          font-size: 0.8rem;
-          width: 100%;
-        }
-
-        .contact {
-          margin-right: 0;
         }
       }
     }

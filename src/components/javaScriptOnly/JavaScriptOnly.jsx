@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import "./javascriptonly.scss";
-import { FaArrowDown } from 'react-icons/fa';
 
 const JavaScriptOnly = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -112,7 +111,7 @@ const JavaScriptOnly = () => {
       <div className="modal-top">
         <div className="carousel">
           <button className="prev" onClick={handlePrevImage}>&#10094;</button>
-          <img src={selectedProject.images[selectedImageIndex]} alt={`Image ${selectedImageIndex + 1}`} />
+          <img src={selectedProject.images[selectedImageIndex]} alt={`${selectedProject.title} ${selectedImageIndex + 1}`} />
           <button className="next" onClick={handleNextImage}>&#10095;</button>
         </div>
       </div>

@@ -1,23 +1,20 @@
 .intro {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-10%, -60%);
-    // background-color: white;
-    margin-right: -250px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #0000001a;
-    z-index: 1000;
-   
-  
-    img {
-      width: 100%;
-      height: auto;
-      border-radius: 20px;
-      
-    }
+  position: fixed;                    // ← Changé de absolute à fixed
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);   // ← Changé de -10% à -50%
+  // margin-right: -250px;            // ← SUPPRIMÉ (mettez en commentaire ou effacez)
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0000001a;
+  z-index: 1000;
+  max-width: 90vw;                    // ← NOUVEAU
+  max-height: 90vh;                   // ← NOUVEAU
+  overflow: auto;                     // ← NOUVEAU
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
   }
-  
-  
-  
+}

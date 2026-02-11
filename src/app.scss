@@ -1,35 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --container-max: 1040px;
+  --bg-950: #050814;
+  --bg-900: #0a1024;
+  --bg-850: #0f1733;
+  --card: rgba(17, 27, 53, 0.8);
+  --card-border: rgba(148, 163, 184, 0.2);
+  --text: #e7ecff;
+  --text-dim: #9aa7c7;
+  --accent: #23d4c5;
+  --accent-2: #4f7cff;
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // box-shadow: 0 0 0 3px red inset;
-  
+}
 
-
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+// 🔴 CSS DE DÉBOGAGE - À RETIRER APRÈS
+* {
+  // outline: 1px solid red !important;
+  max-width: 100vw !important;
+  box-sizing: border-box !important;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  height: 120vh;
-  margin:0;
-  padding: 0;
-  // background: linear-gradient(90deg, rgb(150, 145, 147) 0%, rgb(95, 95, 233) 35%, rgba(0,212,255,1) 100%);
-  // background-image: linear-gradient(0deg, rgba(22, 26, 45, 1) 15%, rgba(17, 22, 45, 1) 35%, rgba(13, 19, 45, 1) 50%, rgba(9, 15, 45, 1) 65%, rgba(4, 11, 45, 1) 85%, rgba(0, 8, 45, 1) 100%);
-  background-color: #0a0b3f;
+  font-family: "Manrope", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 12% 16%, rgba(79, 124, 255, 0.2), transparent 40%),
+    radial-gradient(circle at 90% 20%, rgba(35, 212, 197, 0.18), transparent 35%),
+    linear-gradient(145deg, var(--bg-950), var(--bg-900) 45%, var(--bg-850));
+  min-height: 100vh;
+  line-height: 1.5;
+  overflow-x: hidden;
+  font-size: 15px;
+}
 
- color:white;
- 
+#root,
+.App {
+  width: 100%;
+  max-width: 100vw;      
+  overflow-x: hidden;
+}
 
+.App {
+  display: flex;
+  flex-direction: column;
+}
 
-  // background-image: url('./../../../public/back.jpg');
-  // background-size: cover;
-  // background-position: center;
-  // background-repeat: no-repeat;
- 
- 
-
-
-
+a {
+  color: inherit;
 }

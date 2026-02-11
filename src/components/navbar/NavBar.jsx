@@ -1,66 +1,64 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import Flag from 'react-world-flags';
-import { GrDownload } from "react-icons/gr";
-import { useTranslation } from 'react-i18next';
+import Flag from "react-world-flags";
+import { FaBars, FaTimes, FaCode } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 import "./navbar.scss";
 
 const NavBar = () => {
   const { i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/Marwen-Jdidi-CV_DEV.pdf";
-    link.download = "Marwen-Jdidi-CV_DEV.pdf";
-    link.click();
-  };
-
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
   };
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen((prev) => !prev);
   };
 
   return (
     <nav className="navbar">
       <div className="navbar-menu">
-        {/* <div className="cv" onClick={handleDownload}>
-          <span>Download CV</span>
-          <abbr title="clic here to download CV">
-            <GrDownload style={{ fontSize: "20px" }} className="icon" />
-          </abbr>
-        </div> */}
+        <span className="brand">
+          <span className="brand-icon">
+            <FaCode />
+          </span>
+          <span className="brand-text">MarwenCode</span>
+        </span>
 
-        <div className="burger-menu" onClick={toggleMenu}>
-          ☰
-        </div>
+        <button
+          className="burger-menu"
+          onClick={toggleMenu}
+          aria-label="Toggle navigation menu"
+          type="button"
+        >
+          {isMenuOpen ? <FaTimes /> : <FaBars />}
+        </button>
 
         {isMenuOpen && (
           <ul className="mobile-menu">
-            <Link to="skills" smooth={true} duration={500}>
-              <li><a href="#skills">Skills</a></li>
+            <Link to="skills" smooth duration={500} onClick={toggleMenu}>
+              <li>Skills</li>
             </Link>
-            <Link to="projects" smooth={true} duration={500}>
-              <li><a href="#projects">Projects</a></li>
+            <Link to="projects" smooth duration={500} onClick={toggleMenu}>
+              <li>Projects</li>
             </Link>
-            <Link to="contact" smooth={true} duration={500}>
-              <li><a href="#contact">Contact</a></li>
+            <Link to="contact" smooth duration={500} onClick={toggleMenu}>
+              <li>Contact</li>
             </Link>
           </ul>
         )}
 
         <ul className="desktop-menu">
-          <Link to="skills" smooth={true} duration={500}>
-            <li><a href="#skills">Skills</a></li>
+          <Link to="skills" smooth duration={500}>
+            <li>Skills</li>
           </Link>
-          <Link to="projects" smooth={true} duration={500}>
-            <li><a href="#projects">Projects</a></li>
+          <Link to="projects" smooth duration={500}>
+            <li>Projects</li>
           </Link>
-          <Link to="contact" smooth={true} duration={500}>
-            <li><a href="#contact">Contact</a></li>
+          <Link to="contact" smooth duration={500}>
+            <li>Contact</li>
           </Link>
         </ul>
       </div>
@@ -68,13 +66,13 @@ const NavBar = () => {
       <div className="language-switcher">
         <Flag
           code="FR"
-          style={{ width: "30px", cursor: "pointer" }}
-          onClick={() => changeLanguage('fr')}
+          style={{ width: "28px", cursor: "pointer" }}
+          onClick={() => changeLanguage("fr")}
         />
         <Flag
           code="GB"
-          style={{ width: "30px", marginLeft: "10px", cursor: "pointer" }}
-          onClick={() => changeLanguage('en')}
+          style={{ width: "28px", marginLeft: "10px", cursor: "pointer" }}
+          onClick={() => changeLanguage("en")}
         />
       </div>
     </nav>
