@@ -10,7 +10,7 @@ const Projects = () => {
     {
       title: t("projects.openTaskHub.title"),
       description: t("projects.openTaskHub.description"),
-      image: "/openTaskHub-pic1.png",
+      image: "/OpenTaskHub-pic1.png",
       app: "https://opentaskhub-frontend.onrender.com/login",
     },
     {
@@ -74,3 +74,4 @@ const Projects = () => {
 };
 
 export default Projects;
+
