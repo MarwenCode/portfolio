@@ -1,70 +1,205 @@
-# Getting Started with Create React App
+# Portfolio de Marwen Jdidi
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Portfolio personnel développé avec React pour présenter mon profil, mes compétences et une sélection de projets full-stack/front-end.
 
-## Available Scripts
+## Demo
 
-In the project directory, you can run:
+- Production: https://marwen-portfolio.onrender.com/
 
-### `npm start`
+## Objectif du projet
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Ce projet sert de vitrine technique et produit:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Présenter mon profil de développeur (front-end / back-end).
+- Mettre en avant des projets réels déployés.
+- Permettre un contact direct via un formulaire intégré.
+- Proposer une expérience bilingue (FR/EN).
 
-### `npm test`
+## Fonctionnalités principales
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Navigation one-page fluide vers les sections (`Skills`, `Projects`, `Contact`).
+- Internationalisation français/anglais avec bascule via drapeaux.
+- Affichage de projets avec:
+  - image de preview,
+  - liens code/app,
+  - modal vidéo (YouTube) pour les démos.
+- Section "JavaScript & Responsive apps" avec modal et carrousel d'images.
+- Formulaire de contact relié à EmailJS.
+- Notifications utilisateur (succès/erreur) avec Toast.
+- Animations d'apparition au scroll sur les cartes projets.
 
-### `npm run build`
+## Stack technique
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React 18
+- SCSS (Sass)
+- Create React App (react-scripts)
+- i18next + react-i18next
+- react-scroll
+- framer-motion
+- react-intersection-observer
+- react-icons
+- react-toastify
+- emailjs-com
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Architecture globale
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+L'application est organisée autour de composants UI réutilisables, sans backend interne (le portfolio est statique côté front, avec intégration EmailJS pour le formulaire).
 
-### `npm run eject`
+- `App` compose la structure principale (`NavBar` + `Home`).
+- `Home` orchestre les sections métier: présentation, compétences, projets, contact.
+- `Projects` + `Project` gèrent le rendu des cartes projets et des actions (app/code/demo).
+- `JavaScriptOnly` gère une galerie de projets avec modal interne et carrousel.
+- `i18n.js` centralise la configuration des langues.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Arborescence des dossiers
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```text
+portfolio-/
+  public/                 # assets statiques (images, icônes, manifest, etc.)
+  src/
+    components/
+      about/              # composant "About" (historique / non principal actuellement)
+      home/               # page principale + sections + formulaire
+      iframe/             # composant expérimental/non utilisé actuellement
+      intro/              # composant intro (non branché dans App)
+      javaScriptOnly/     # projets JS-only + modal/carrousel
+      modal/              # ancienne modal générique (non branchée)
+      navbar/             # navigation + switch langue
+      projects/           # liste projets + carte projet
+    locales/
+      fr.json             # traductions FR
+      en.json             # traductions EN
+    App.js                # composition principale
+    i18n.js               # config i18next
+    index.js              # point d'entrée React + ToastContainer global
+  package.json
+  README.md
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Fichiers clés et responsabilités
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `src/index.js`
+  - Monte l'application React.
+  - Déclare un `ToastContainer` global.
 
-## Learn More
+- `src/App.js`
+  - Compose les blocs de haut niveau de l'UI.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `src/i18n.js`
+  - Enregistre les ressources FR/EN.
+  - Définit la langue par défaut (`fr`) et la langue fallback (`en`).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `src/components/navbar/NavBar.jsx`
+  - Navigation one-page (`react-scroll`).
+  - Menu mobile burger.
+  - Bascule de langue avec drapeaux.
 
-### Code Splitting
+- `src/components/home/Home.jsx`
+  - Section Hero/Présentation.
+  - Section compétences.
+  - Section projets (`Projects`).
+  - Section JavaScript-only (`JavaScriptOnly`).
+  - Formulaire de contact via EmailJS.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- `src/components/projects/Projects.jsx`
+  - Source de vérité des projets affichés (titre, description, image, liens).
 
-### Analyzing the Bundle Size
+- `src/components/projects/Project.jsx`
+  - Carte projet animée (`framer-motion`).
+  - Gestion ouverture/fermeture démo vidéo.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- `src/components/javaScriptOnly/JavaScriptOnly.jsx`
+  - Projets JS avec modal détaillée et navigation d'images.
 
-### Making a Progressive Web App
+## Librairies installées (explication)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Librairies utilisées dans l'application
 
-### Advanced Configuration
+- `react`, `react-dom`: base UI.
+- `sass`: styles SCSS.
+- `i18next`, `react-i18next`: internationalisation.
+- `react-scroll`: scroll fluide vers sections.
+- `react-world-flags`: icônes drapeaux FR/GB.
+- `react-icons`: icônes UI et tech stack.
+- `framer-motion`: animations de cartes.
+- `react-intersection-observer`: déclenchement d'animations au viewport.
+- `react-toastify`: feedback utilisateur non bloquant.
+- `emailjs-com`: envoi de mails sans backend dédié.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Librairies présentes mais peu/pas exploitées actuellement
 
-### Deployment
+- `react-router-dom`: non utilisée dans la version actuelle (application one-page).
+- `@fortawesome/*`: non utilisée actuellement (remplacée par `react-icons`).
+- `js-file-download`: non utilisée dans le code actuel.
+- `@testing-library/*`, `web-vitals`: incluses par défaut via CRA/testing.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Choix techniques et justification
 
-### `npm run build` fails to minify
+- One-page architecture: rapide à parcourir pour un recruteur.
+- i18n natif: permet un ciblage FR/EN sans dupliquer les composants.
+- Assets statiques dans `public/`: simplicité d'accès via chemins absolus.
+- EmailJS: simplifie le contact sans déployer un backend dédié.
+- Animations ciblées: améliore la perception de qualité sans surcharger l'UX.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Installation locale
+
+### Prérequis
+
+- Node.js 18+ recommandé
+- npm 8+
+
+### Démarrer le projet
+
+```bash
+npm install
+npm start
+```
+
+Application disponible sur `http://localhost:3000`.
+
+### Build production
+
+```bash
+npm run build
+```
+
+Le build est généré dans `build/`.
+
+## Variables sensibles / configuration
+
+Le formulaire de contact repose sur EmailJS (`serviceId`, `templateId`, `publicKey`).
+
+Recommandation d'amélioration:
+
+- déplacer ces identifiants dans des variables d'environnement (`.env`) au lieu de les laisser en dur dans `Home.jsx`.
+
+Exemple:
+
+```env
+REACT_APP_EMAILJS_SERVICE_ID=...
+REACT_APP_EMAILJS_TEMPLATE_ID=...
+REACT_APP_EMAILJS_PUBLIC_KEY=...
+```
+
+## Déploiement
+
+Le projet est déployé sur Render en mode front statique.
+
+Points d'attention en production:
+
+- Respect strict de la casse des noms de fichiers (Linux est case-sensitive).
+- Vérifier que tous les assets référencés existent dans `public/` avec le même nom exact.
+
+## Pistes d'amélioration
+
+- Ajouter une vraie couche tests (unitaires + composants + e2e).
+- Nettoyer les dépendances non utilisées pour réduire le bundle.
+- Factoriser certaines données (projets) dans un fichier JSON dédié.
+- Ajouter une CI simple (lint + test + build).
+- Externaliser les contenus (CMS léger ou fichier de config unique).
+
+## Auteur
+
+- Marwen Jdidi
+- LinkedIn: https://www.linkedin.com/in/marwen-dev-react-js
+- GitHub: https://github.com/MarwenCode
